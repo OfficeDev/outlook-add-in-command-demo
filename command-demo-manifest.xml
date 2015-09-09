@@ -53,13 +53,14 @@
         <DesktopFormFactor>
           <FunctionFile resid="functionFile" />
           
+          <!-- Message compose form -->
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
-              <Group id="addinDemoGroup">
+              <Group id="msgComposeDemoGroup">
                 <Label resid="groupLabel" />
                 <Tooltip resid="groupTooltip" />
                 <!-- Function (UI-less) button -->
-                <Control xsi:type="Button" id="functionButton">
+                <Control xsi:type="Button" id="msgComposeFunctionButton">
                   <Label resid="funcComposeButtonLabel" />
                   <Tooltip resid="funcComposeButtonTooltip" />
                   <Supertip>
@@ -76,7 +77,7 @@
                   </Action>
                 </Control>
                 <!-- Menu (dropdown) button -->
-                <Control xsi:type="Menu" id="dropdownButton">
+                <Control xsi:type="Menu" id="msgComposeMenuButton">
                   <Label resid="menuComposeButtonLabel" />
                   <Tooltip resid="menuComposeButtonTooltip" />
                   <Supertip>
@@ -89,7 +90,7 @@
                     <bt:Image size="80" resid="red-icon-80" />
                   </Icon>
                   <Items>
-                    <Item id="menuItem1">
+                    <Item id="msgComposeMenuItem1">
                       <Label resid="menuItem1ComposeLabel" />
                       <Tooltip resid="menuItem1ComposeTip" />
                       <Supertip>
@@ -105,7 +106,7 @@
                         <FunctionName>addMsg1ToBody</FunctionName>
                       </Action>
                     </Item>
-                    <Item id="menuItem2">
+                    <Item id="msgComposeMenuItem2">
                       <Label resid="menuItem2ComposeLabel" />
                       <Tooltip resid="menuItem2ComposeTip" />
                       <Supertip>
@@ -121,7 +122,7 @@
                         <FunctionName>addMsg2ToBody</FunctionName>
                       </Action>
                     </Item>
-                    <Item id="menuItem3">
+                    <Item id="msgComposeMenuItem3">
                       <Label resid="menuItem3ComposeLabel" />
                       <Tooltip resid="menuItem3ComposeTip" />
                       <Supertip>
@@ -140,7 +141,115 @@
                   </Items>
                 </Control>
                 <!-- Task pane button -->
-                <Control xsi:type="Button" id="openPaneButton">
+                <Control xsi:type="Button" id="msgComposeOpenPaneButton">
+                  <Label resid="paneComposeButtonLabel" />
+                  <Tooltip resid="paneComposeButtonTooltip" />
+                  <Supertip>
+                    <Title resid="paneComposeSuperTipTitle" />
+                    <Description resid="paneComposeSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="green-icon-16" />
+                    <bt:Image size="32" resid="green-icon-32" />
+                    <bt:Image size="80" resid="green-icon-80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="composeTaskPaneUrl" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+          
+          <!-- Appointment compose form -->
+          <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="apptComposeDemoGroup">
+                <Label resid="groupLabel" />
+                <Tooltip resid="groupTooltip" />
+                <!-- Function (UI-less) button -->
+                <Control xsi:type="Button" id="apptComposeFunctionButton">
+                  <Label resid="funcComposeButtonLabel" />
+                  <Tooltip resid="funcComposeButtonTooltip" />
+                  <Supertip>
+                    <Title resid="funcComposeSuperTipTitle" />
+                    <Description resid="funcComposeSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="blue-icon-16" />
+                    <bt:Image size="32" resid="blue-icon-32" />
+                    <bt:Image size="80" resid="blue-icon-80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>addDefaultMsgToBody</FunctionName>
+                  </Action>
+                </Control>
+                <!-- Menu (dropdown) button -->
+                <Control xsi:type="Menu" id="apptComposeMenuButton">
+                  <Label resid="menuComposeButtonLabel" />
+                  <Tooltip resid="menuComposeButtonTooltip" />
+                  <Supertip>
+                    <Title resid="menuComposeSuperTipTitle" />
+                    <Description resid="menuComposeSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="red-icon-16" />
+                    <bt:Image size="32" resid="red-icon-32" />
+                    <bt:Image size="80" resid="red-icon-80" />
+                  </Icon>
+                  <Items>
+                    <Item id="apptComposeMenuItem1">
+                      <Label resid="menuItem1ComposeLabel" />
+                      <Tooltip resid="menuItem1ComposeTip" />
+                      <Supertip>
+                        <Title resid="menuItem1ComposeLabel" />
+                        <Description resid="menuItem1ComposeTip" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="red-icon-16" />
+                        <bt:Image size="32" resid="red-icon-32" />
+                        <bt:Image size="80" resid="red-icon-80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>addMsg1ToBody</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id="apptComposeMenuItem2">
+                      <Label resid="menuItem2ComposeLabel" />
+                      <Tooltip resid="menuItem2ComposeTip" />
+                      <Supertip>
+                        <Title resid="menuItem2ComposeLabel" />
+                        <Description resid="menuItem2ComposeTip" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="red-icon-16" />
+                        <bt:Image size="32" resid="red-icon-32" />
+                        <bt:Image size="80" resid="red-icon-80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>addMsg2ToBody</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id="apptComposeMenuItem3">
+                      <Label resid="menuItem3ComposeLabel" />
+                      <Tooltip resid="menuItem3ComposeTip" />
+                      <Supertip>
+                        <Title resid="menuItem3ComposeLabel" />
+                        <Description resid="menuItem3ComposeTip" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="red-icon-16" />
+                        <bt:Image size="32" resid="red-icon-32" />
+                        <bt:Image size="80" resid="red-icon-80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>addMsg3ToBody</FunctionName>
+                      </Action>
+                    </Item>
+                  </Items>
+                </Control>
+                <!-- Task pane button -->
+                <Control xsi:type="Button" id="apptComposeOpenPaneButton">
                   <Label resid="paneComposeButtonLabel" />
                   <Tooltip resid="paneComposeButtonTooltip" />
                   <Supertip>
@@ -207,17 +316,17 @@
       <bt:LongStrings>
         <bt:String id="groupTooltip" DefaultValue="Add-in Demo of the different command types"/>
         <!-- Compose mode -->
-        <bt:String id="funcComposeButtonTooltip" DefaultValue="Inserts text into body of the message"/>
-        <bt:String id="menuComposeButtonTooltip" DefaultValue="Inserts your choice of text into body of the message"/>
-        <bt:String id="paneComposeButtonTooltip" DefaultValue="Opens a pane where you can enter text to insert in the body of the message"/>
+        <bt:String id="funcComposeButtonTooltip" DefaultValue="Inserts text into body of the message or appointment"/>
+        <bt:String id="menuComposeButtonTooltip" DefaultValue="Inserts your choice of text into body of the message or appointment"/>
+        <bt:String id="paneComposeButtonTooltip" DefaultValue="Opens a pane where you can enter text to insert in the body of the message or appointment"/>
         
-        <bt:String id="funcComposeSuperTipDescription" DefaultValue="Inserts text into body of the message. This is an example of a function button."/>
-        <bt:String id="menuComposeSuperTipDescription" DefaultValue="Inserts your choice of text into body of the message. This is an example of a drop-down menu button."/>
-        <bt:String id="paneComposeSuperTipDescription" DefaultValue="Opens a pane where you can enter text to insert in the body of the message. This is an example of a button that opens a task pane."/>
+        <bt:String id="funcComposeSuperTipDescription" DefaultValue="Inserts text into body of the message or appointment. This is an example of a function button."/>
+        <bt:String id="menuComposeSuperTipDescription" DefaultValue="Inserts your choice of text into body of the message or appointment. This is an example of a drop-down menu button."/>
+        <bt:String id="paneComposeSuperTipDescription" DefaultValue="Opens a pane where you can enter text to insert in the body of the message or appointment. This is an example of a button that opens a task pane."/>
         
-        <bt:String id="menuItem1ComposeTip" DefaultValue="Inserts Hello World! into the body of the message." />
-        <bt:String id="menuItem2ComposeTip" DefaultValue="Inserts Add-in commands are cool! into the body of the message." />
-        <bt:String id="menuItem3ComposeTip" DefaultValue="Inserts Visit dev.outlook.com into the body of the message." />
+        <bt:String id="menuItem1ComposeTip" DefaultValue="Inserts Hello World! into the body of the message or appointment." />
+        <bt:String id="menuItem2ComposeTip" DefaultValue="Inserts Add-in commands are cool! into the body of the message or appointment." />
+        <bt:String id="menuItem3ComposeTip" DefaultValue="Inserts Visit dev.outlook.com into the body of the message or appointment." />
 
         <!-- Read mode -->
         <!--
