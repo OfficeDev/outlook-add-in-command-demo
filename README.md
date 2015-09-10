@@ -43,15 +43,15 @@ In order to run this sample, you will need the following:
 
 ## Key components of the sample
 
-- `command-demo-manifest.xml`: The manifest file for the add-in.
-- `FunctionFile/Functions.html`: An empty HTML file to load `Functions.js` for clients that support add-in commands.
-- `FunctionFile/Functions.js`: The code that is invoked when the add-in command buttons are clicked.
-- `AppCompose/TaskPane/TaskPane.html`: The HTML markup for the task pane UI displayed by the **Insert custom message** button.
-- `AppCompose/TaskPane/TaskPane.js`: Code used by the task pane UI displayed by the **Insert custom message** button.
-- `AppRead/TaskPane/TaskPane.html`: The HTML markup for the task pane UI displayed by the **Display all properties** button. This is also displayed by clients in read mode that do not support add-in commands.
-- `AppRead/TaskPane/TaskPane.js`: Code used by the task pane UI displayed by the **Display all properties** button.
-- `AppCompose/Home/Home.html`: The HTML file that is loaded and displayed by clients in compose mode that do not support add-in commands.
-- `AppCompose/Home/Home.js`: The code that is invoked by clients in compose mode that do not support add-in commands.
+- [```command-demo-manifest.xml```](command-demo-manifest.xml): The manifest file for the add-in.
+- [```FunctionFile/Functions.html```](FunctionFile/Functions.html): An empty HTML file to load `Functions.js` for clients that support add-in commands.
+- [```FunctionFile/Functions.js```](FunctionFile/Functions.js): The code that is invoked when the add-in command buttons are clicked.
+- [```AppCompose/TaskPane/TaskPane.html```](AppCompose/TaskPane/TaskPane.html): The HTML markup for the task pane UI displayed by the **Insert custom message** button.
+- [```AppCompose/TaskPane/TaskPane.js```](AppCompose/TaskPane/TaskPane.js): Code used by the task pane UI displayed by the **Insert custom message** button.
+- [```AppRead/TaskPane/TaskPane.html```](AppRead/TaskPane/TaskPane.html): The HTML markup for the task pane UI displayed by the **Display all properties** button. This is also displayed by clients in read mode that do not support add-in commands.
+- [```AppRead/TaskPane/TaskPane.js```](AppRead/TaskPane/TaskPane.js): Code used by the task pane UI displayed by the **Display all properties** button.
+- [```AppCompose/Home/Home.html```](AppCompose/Home/Home.html): The HTML file that is loaded and displayed by clients in compose mode that do not support add-in commands.
+- [```AppCompose/Home/Home.js```](AppCompose/Home/Home.js): The code that is invoked by clients in compose mode that do not support add-in commands.
 
 ## How's it all work?
 
@@ -65,26 +65,34 @@ Within the `VersionOverrides` element, there are three child elements, `Requirem
 
 In this sample, there is only one host specified (Outlook):
 
-    <Host xsi:type="MailHost">
+```xml
+<Host xsi:type="MailHost">
+```
     
 Within this element are the configuration specifics for the desktop version of Outlook:
 
-    <DesktopFormFactor>
+```xml
+<DesktopFormFactor>
+```
     
 The URL to the HTML file with all of the JavaScript code for the button is specified in the `FunctionFile` element (note that it uses the resource ID specified in the `Resources` element):
 
-    <FunctionFile resid="functionFile" />
-    
+```xml
+<FunctionFile resid="functionFile" />
+```
+
 The manifest specifies all four available extension points:
 
-    <!-- Message compose form -->
-    <ExtensionPoint xsi:type="MessageComposeCommandSurface">
-    <!-- Appointment compose form -->
-    <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
-    <!-- Message read form -->
-    <ExtensionPoint xsi:type="MessageReadCommandSurface">
-    <!-- Appointment read form -->
-    <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
+```xml
+<!-- Message compose form -->
+<ExtensionPoint xsi:type="MessageComposeCommandSurface">
+<!-- Appointment compose form -->
+<ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
+<!-- Message read form -->
+<ExtensionPoint xsi:type="MessageReadCommandSurface">
+<!-- Appointment read form -->
+<ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
+```
     
 Within each extension point, there is an example of each type of button.
 
@@ -92,114 +100,120 @@ Within each extension point, there is an example of each type of button.
 
 This is created by setting the `xsi:type` attribute of a `Control` element to `Button`, and adding an `Action` child element with an `xsi:type` attribute set to `ExecuteFunction`. For example, look at the **Insert default message** button:
 
-    <!-- Function (UI-less) button -->
-    <Control xsi:type="Button" id="msgComposeFunctionButton">
-      <Label resid="funcComposeButtonLabel" />
-      <Tooltip resid="funcComposeButtonTooltip" />
-      <Supertip>
-        <Title resid="funcComposeSuperTipTitle" />
-        <Description resid="funcComposeSuperTipDescription" />
-      </Supertip>
-      <Icon>
-        <bt:Image size="16" resid="blue-icon-16" />
-        <bt:Image size="32" resid="blue-icon-32" />
-        <bt:Image size="80" resid="blue-icon-80" />
-      </Icon>
-      <Action xsi:type="ExecuteFunction">
-        <FunctionName>addDefaultMsgToBody</FunctionName>
-      </Action>
-    </Control>
+```xml
+<!-- Function (UI-less) button -->
+<Control xsi:type="Button" id="msgComposeFunctionButton">
+  <Label resid="funcComposeButtonLabel" />
+  <Tooltip resid="funcComposeButtonTooltip" />
+  <Supertip>
+    <Title resid="funcComposeSuperTipTitle" />
+    <Description resid="funcComposeSuperTipDescription" />
+  </Supertip>
+  <Icon>
+    <bt:Image size="16" resid="blue-icon-16" />
+    <bt:Image size="32" resid="blue-icon-32" />
+    <bt:Image size="80" resid="blue-icon-80" />
+  </Icon>
+  <Action xsi:type="ExecuteFunction">
+    <FunctionName>addDefaultMsgToBody</FunctionName>
+  </Action>
+</Control>
+```
     
 ### A drop-down menu button ###
 
 This is created by setting the `xsi:type` attribute of a `Control` element to `Menu`, and adding an `Items` child element that contains the items to appear on the menu. For example, look at the **Insert message** button:
 
-    <!-- Menu (dropdown) button -->
-    <Control xsi:type="Menu" id="msgComposeMenuButton">
-      <Label resid="menuComposeButtonLabel" />
-      <Tooltip resid="menuComposeButtonTooltip" />
+```xml
+<!-- Menu (dropdown) button -->
+<Control xsi:type="Menu" id="msgComposeMenuButton">
+  <Label resid="menuComposeButtonLabel" />
+  <Tooltip resid="menuComposeButtonTooltip" />
+  <Supertip>
+    <Title resid="menuComposeSuperTipTitle" />
+    <Description resid="menuComposeSuperTipDescription" />
+  </Supertip>
+  <Icon>
+    <bt:Image size="16" resid="red-icon-16" />
+    <bt:Image size="32" resid="red-icon-32" />
+    <bt:Image size="80" resid="red-icon-80" />
+  </Icon>
+  <Items>
+    <Item id="msgComposeMenuItem1">
+      <Label resid="menuItem1ComposeLabel" />
+      <Tooltip resid="menuItem1ComposeTip" />
       <Supertip>
-        <Title resid="menuComposeSuperTipTitle" />
-        <Description resid="menuComposeSuperTipDescription" />
+        <Title resid="menuItem1ComposeLabel" />
+        <Description resid="menuItem1ComposeTip" />
       </Supertip>
       <Icon>
         <bt:Image size="16" resid="red-icon-16" />
         <bt:Image size="32" resid="red-icon-32" />
         <bt:Image size="80" resid="red-icon-80" />
       </Icon>
-      <Items>
-        <Item id="msgComposeMenuItem1">
-          <Label resid="menuItem1ComposeLabel" />
-          <Tooltip resid="menuItem1ComposeTip" />
-          <Supertip>
-            <Title resid="menuItem1ComposeLabel" />
-            <Description resid="menuItem1ComposeTip" />
-          </Supertip>
-          <Icon>
-            <bt:Image size="16" resid="red-icon-16" />
-            <bt:Image size="32" resid="red-icon-32" />
-            <bt:Image size="80" resid="red-icon-80" />
-          </Icon>
-          <Action xsi:type="ExecuteFunction">
-            <FunctionName>addMsg1ToBody</FunctionName>
-          </Action>
-        </Item>
-        <Item id="msgComposeMenuItem2">
-          <Label resid="menuItem2ComposeLabel" />
-          <Tooltip resid="menuItem2ComposeTip" />
-          <Supertip>
-            <Title resid="menuItem2ComposeLabel" />
-            <Description resid="menuItem2ComposeTip" />
-          </Supertip>
-          <Icon>
-            <bt:Image size="16" resid="red-icon-16" />
-            <bt:Image size="32" resid="red-icon-32" />
-            <bt:Image size="80" resid="red-icon-80" />
-          </Icon>
-          <Action xsi:type="ExecuteFunction">
-            <FunctionName>addMsg2ToBody</FunctionName>
-          </Action>
-        </Item>
-        <Item id="msgComposeMenuItem3">
-          <Label resid="menuItem3ComposeLabel" />
-          <Tooltip resid="menuItem3ComposeTip" />
-          <Supertip>
-            <Title resid="menuItem3ComposeLabel" />
-            <Description resid="menuItem3ComposeTip" />
-          </Supertip>
-          <Icon>
-            <bt:Image size="16" resid="red-icon-16" />
-            <bt:Image size="32" resid="red-icon-32" />
-            <bt:Image size="80" resid="red-icon-80" />
-          </Icon>
-          <Action xsi:type="ExecuteFunction">
-            <FunctionName>addMsg3ToBody</FunctionName>
-          </Action>
-        </Item>
-      </Items>
-    </Control>
+      <Action xsi:type="ExecuteFunction">
+        <FunctionName>addMsg1ToBody</FunctionName>
+      </Action>
+    </Item>
+    <Item id="msgComposeMenuItem2">
+      <Label resid="menuItem2ComposeLabel" />
+      <Tooltip resid="menuItem2ComposeTip" />
+      <Supertip>
+        <Title resid="menuItem2ComposeLabel" />
+        <Description resid="menuItem2ComposeTip" />
+      </Supertip>
+      <Icon>
+        <bt:Image size="16" resid="red-icon-16" />
+        <bt:Image size="32" resid="red-icon-32" />
+        <bt:Image size="80" resid="red-icon-80" />
+      </Icon>
+      <Action xsi:type="ExecuteFunction">
+        <FunctionName>addMsg2ToBody</FunctionName>
+      </Action>
+    </Item>
+    <Item id="msgComposeMenuItem3">
+      <Label resid="menuItem3ComposeLabel" />
+      <Tooltip resid="menuItem3ComposeTip" />
+      <Supertip>
+        <Title resid="menuItem3ComposeLabel" />
+        <Description resid="menuItem3ComposeTip" />
+      </Supertip>
+      <Icon>
+        <bt:Image size="16" resid="red-icon-16" />
+        <bt:Image size="32" resid="red-icon-32" />
+        <bt:Image size="80" resid="red-icon-80" />
+      </Icon>
+      <Action xsi:type="ExecuteFunction">
+        <FunctionName>addMsg3ToBody</FunctionName>
+      </Action>
+    </Item>
+  </Items>
+</Control>
+```
     
 ### A button that opens a task pane ###
 
 This is created by setting the `xsi:type` attribute of a `Control` element to `Button`, and adding an `Action` child element with an `xsi:type` attribute set to `ShowTaskPane`. For example, look at the **Insert custom message** button:
 
-    <!-- Task pane button -->
-    <Control xsi:type="Button" id="msgComposeOpenPaneButton">
-      <Label resid="paneComposeButtonLabel" />
-      <Tooltip resid="paneComposeButtonTooltip" />
-      <Supertip>
-        <Title resid="paneComposeSuperTipTitle" />
-        <Description resid="paneComposeSuperTipDescription" />
-      </Supertip>
-      <Icon>
-        <bt:Image size="16" resid="green-icon-16" />
-        <bt:Image size="32" resid="green-icon-32" />
-        <bt:Image size="80" resid="green-icon-80" />
-      </Icon>
-      <Action xsi:type="ShowTaskpane">
-        <SourceLocation resid="composeTaskPaneUrl" />
-      </Action>
-    </Control>
+```xml
+<!-- Task pane button -->
+<Control xsi:type="Button" id="msgComposeOpenPaneButton">
+  <Label resid="paneComposeButtonLabel" />
+  <Tooltip resid="paneComposeButtonTooltip" />
+  <Supertip>
+    <Title resid="paneComposeSuperTipTitle" />
+    <Description resid="paneComposeSuperTipDescription" />
+  </Supertip>
+  <Icon>
+    <bt:Image size="16" resid="green-icon-16" />
+    <bt:Image size="32" resid="green-icon-32" />
+    <bt:Image size="80" resid="green-icon-80" />
+  </Icon>
+  <Action xsi:type="ShowTaskpane">
+    <SourceLocation resid="composeTaskPaneUrl" />
+  </Action>
+</Control>
+```
 
 ## Questions and comments
 
