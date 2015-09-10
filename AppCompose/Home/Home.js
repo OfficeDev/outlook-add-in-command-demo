@@ -19,10 +19,12 @@
   };
   
   function insertText(textToInsert) {
+    // Insert as plain text (CoercionType.Text)
     Office.context.mailbox.item.body.setSelectedDataAsync(
       textToInsert, 
       { coercionType: Office.CoercionType.Text }, 
       function (asyncResult) {
+        // Display the result to the user
         if (asyncResult.status == Office.AsyncResultStatus.Succeeded) {
           app.showNotification("Success", "\"" + textToInsert + "\" inserted successfully.");
         }

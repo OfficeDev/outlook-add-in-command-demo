@@ -3,6 +3,8 @@
 Office.initialize = function () {
 }
 
+// Helper function to add a status message to
+// the info bar.
 function statusUpdate(icon, text) {
   Office.context.mailbox.item.notificationMessages.replaceAsync("status", {
     type: "informationalMessage",
@@ -12,6 +14,8 @@ function statusUpdate(icon, text) {
   });
 }
 
+// Adds text into the body of the item, then reports the results
+// to the info bar.
 function addTextToBody(text, icon, event) {
   Office.context.mailbox.item.body.setSelectedDataAsync(text, { coercionType: Office.CoercionType.Text }, 
     function (asyncResult){
@@ -44,6 +48,7 @@ function addMsg3ToBody(event) {
   addTextToBody("Visit https://dev.outlook.com today for all of your add-in development needs.", "red-icon-16", event);
 }
 
+// Gets the subject of the item and displays it in the info bar.
 function getSubject(event) {
   var subject = Office.context.mailbox.item.subject;
   
@@ -57,6 +62,7 @@ function getSubject(event) {
   event.completed();
 }
 
+// Gets the item class of the item and displays it in the info bar.
 function getItemClass(event) {
   var itemClass = Office.context.mailbox.item.itemClass;
   
@@ -70,6 +76,7 @@ function getItemClass(event) {
   event.completed();
 }
 
+// Gets the date and time when the item was created and displays it in the info bar.
 function getDateTimeCreated(event) {
   var dateTimeCreated = Office.context.mailbox.item.dateTimeCreated;
   
@@ -83,6 +90,7 @@ function getDateTimeCreated(event) {
   event.completed();
 }
 
+// Gets the ID of the item and displays it in the info bar.
 function getItemID(event) {
   // Limited to 150 characters max in the info bar, so 
   // only grab the first 50 characters of the ID
