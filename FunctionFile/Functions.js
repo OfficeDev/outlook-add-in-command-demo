@@ -44,6 +44,60 @@ function addMsg3ToBody(event) {
   addTextToBody("Visit https://dev.outlook.com today for all of your add-in development needs.", "red-icon-16", event);
 }
 
+function getSubject(event) {
+  var subject = Office.context.mailbox.item.subject;
+  
+  Office.context.mailbox.item.notificationMessages.addAsync("subject", {
+    type: "informationalMessage",
+    icon: "blue-icon-16",
+    message: "Subject: " + subject,
+    persistent: false
+  });
+  
+  event.completed();
+}
+
+function getItemClass(event) {
+  var itemClass = Office.context.mailbox.item.itemClass;
+  
+  Office.context.mailbox.item.notificationMessages.addAsync("itemClass", {
+    type: "informationalMessage",
+    icon: "red-icon-16",
+    message: "Item Class: " + itemClass,
+    persistent: false
+  });
+  
+  event.completed();
+}
+
+function getDateTimeCreated(event) {
+  var dateTimeCreated = Office.context.mailbox.item.dateTimeCreated;
+  
+  Office.context.mailbox.item.notificationMessages.addAsync("dateTimeCreated", {
+    type: "informationalMessage",
+    icon: "red-icon-16",
+    message: "Created: " + dateTimeCreated.toLocaleString(),
+    persistent: false
+  });
+  
+  event.completed();
+}
+
+function getItemID(event) {
+  // Limited to 150 characters max in the info bar, so 
+  // only grab the first 50 characters of the ID
+  var itemID = Office.context.mailbox.item.itemId.substring(0, 50);
+  
+  Office.context.mailbox.item.notificationMessages.addAsync("itemID", {
+    type: "informationalMessage",
+    icon: "red-icon-16",
+    message: "Item ID: " + itemID,
+    persistent: false
+  });
+  
+  event.completed();
+}
+
 // MIT License: 
  
 // Permission is hereby granted, free of charge, to any person obtaining 
