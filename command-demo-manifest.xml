@@ -376,6 +376,114 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
+          
+          <!-- Appointment read form -->
+          <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="apptReadDemoGroup">
+                <Label resid="groupLabel" />
+                <Tooltip resid="groupTooltip" />
+                <!-- Function (UI-less) button -->
+                <Control xsi:type="Button" id="apptReadFunctionButton">
+                  <Label resid="funcReadButtonLabel" />
+                  <Tooltip resid="funcReadButtonTooltip" />
+                  <Supertip>
+                    <Title resid="funcReadSuperTipTitle" />
+                    <Description resid="funcReadSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="blue-icon-16" />
+                    <bt:Image size="32" resid="blue-icon-32" />
+                    <bt:Image size="80" resid="blue-icon-80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>getSubject</FunctionName>
+                  </Action>
+                </Control>
+                <!-- Menu (dropdown) button -->
+                <Control xsi:type="Menu" id="apptReadMenuButton">
+                  <Label resid="menuReadButtonLabel" />
+                  <Tooltip resid="menuReadButtonTooltip" />
+                  <Supertip>
+                    <Title resid="menuReadSuperTipTitle" />
+                    <Description resid="menuReadSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="red-icon-16" />
+                    <bt:Image size="32" resid="red-icon-32" />
+                    <bt:Image size="80" resid="red-icon-80" />
+                  </Icon>
+                  <Items>
+                    <Item id="apptReadMenuItem1">
+                      <Label resid="menuItem1ReadLabel" />
+                      <Tooltip resid="menuItem1ReadTip" />
+                      <Supertip>
+                        <Title resid="menuItem1ReadLabel" />
+                        <Description resid="menuItem1ReadTip" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="red-icon-16" />
+                        <bt:Image size="32" resid="red-icon-32" />
+                        <bt:Image size="80" resid="red-icon-80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>getItemClass</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id="apptReadMenuItem2">
+                      <Label resid="menuItem2ReadLabel" />
+                      <Tooltip resid="menuItem2ReadTip" />
+                      <Supertip>
+                        <Title resid="menuItem2ReadLabel" />
+                        <Description resid="menuItem2ReadTip" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="red-icon-16" />
+                        <bt:Image size="32" resid="red-icon-32" />
+                        <bt:Image size="80" resid="red-icon-80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>getDateTimeCreated</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id="apptReadMenuItem3">
+                      <Label resid="menuItem3ReadLabel" />
+                      <Tooltip resid="menuItem3ReadTip" />
+                      <Supertip>
+                        <Title resid="menuItem3ReadLabel" />
+                        <Description resid="menuItem3ReadTip" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="red-icon-16" />
+                        <bt:Image size="32" resid="red-icon-32" />
+                        <bt:Image size="80" resid="red-icon-80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>getItemID</FunctionName>
+                      </Action>
+                    </Item>
+                  </Items>
+                </Control>
+                <!-- Task pane button -->
+                <Control xsi:type="Button" id="apptReadOpenPaneButton">
+                  <Label resid="paneReadButtonLabel" />
+                  <Tooltip resid="paneReadButtonTooltip" />
+                  <Supertip>
+                    <Title resid="paneReadSuperTipTitle" />
+                    <Description resid="paneReadSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="green-icon-16" />
+                    <bt:Image size="32" resid="green-icon-32" />
+                    <bt:Image size="80" resid="green-icon-80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="readTaskPaneUrl" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
 
         </DesktopFormFactor>
       </Host>
