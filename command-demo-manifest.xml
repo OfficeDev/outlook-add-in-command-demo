@@ -26,8 +26,11 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost/apps/command-demo/AppRead/Home/Home.html"/>
-        <RequestedHeight>250</RequestedHeight>
+        <!-- NOTE: Just reusing the read taskpane page that is invoked by the button
+             on the ribbon in clients that support add-in commands. You can 
+             use a completely different page if desired -->
+        <SourceLocation DefaultValue="https://localhost/apps/command-demo/AppRead/TaskPane/TaskPane.html"/>
+        <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
     <Form xsi:type="ItemEdit">
