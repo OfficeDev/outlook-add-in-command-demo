@@ -12,8 +12,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Add-in Command Demo" />
   <Description DefaultValue="Adds command buttons to the ribbon in Outlook"/>
-  <IconUrl DefaultValue="https://localhost/apps/command-demo/images/demo-64.png" />
-  <HighResolutionIconUrl DefaultValue="https://localhost/apps/command-demo/images/demo-80.png" />
+  <IconUrl DefaultValue="YOUR_WEB_SERVER/images/demo-64.png" />
+  <HighResolutionIconUrl DefaultValue="YOUR_WEB_SERVER/images/demo-80.png" />
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
@@ -29,13 +29,13 @@
         <!-- NOTE: Just reusing the read taskpane page that is invoked by the button
              on the ribbon in clients that support add-in commands. You can 
              use a completely different page if desired -->
-        <SourceLocation DefaultValue="https://localhost/apps/command-demo/AppRead/TaskPane/TaskPane.html"/>
+        <SourceLocation DefaultValue="YOUR_WEB_SERVER/AppRead/TaskPane/TaskPane.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
     <Form xsi:type="ItemEdit">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost/apps/command-demo/AppCompose/Home/Home.html"/>
+        <SourceLocation DefaultValue="YOUR_WEB_SERVER/AppCompose/Home/Home.html"/>
       </DesktopSettings>
     </Form>
   </FormSettings>
@@ -50,6 +50,11 @@
 
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
 
+    <Requirements>
+      <bt:Sets DefaultMinVersion="1.3">
+        <bt:Set Name="Mailbox" />
+      </bt:Sets>
+    </Requirements>
     <Hosts>
       <Host xsi:type="MailHost">
 
@@ -495,22 +500,22 @@
     <Resources>
       <bt:Images>
         <!-- Blue icon -->
-        <bt:Image id="blue-icon-16" DefaultValue="https://localhost/apps/command-demo/images/blue-16.png"/>
-        <bt:Image id="blue-icon-32" DefaultValue="https://localhost/apps/command-demo/images/blue-32.png"/>
-        <bt:Image id="blue-icon-80" DefaultValue="https://localhost/apps/command-demo/images/blue-80.png"/>
+        <bt:Image id="blue-icon-16" DefaultValue="YOUR_WEB_SERVER/images/blue-16.png"/>
+        <bt:Image id="blue-icon-32" DefaultValue="YOUR_WEB_SERVER/images/blue-32.png"/>
+        <bt:Image id="blue-icon-80" DefaultValue="YOUR_WEB_SERVER/images/blue-80.png"/>
         <!-- Red icon -->
-        <bt:Image id="red-icon-16" DefaultValue="https://localhost/apps/command-demo/images/red-16.png"/>
-        <bt:Image id="red-icon-32" DefaultValue="https://localhost/apps/command-demo/images/red-32.png"/>
-        <bt:Image id="red-icon-80" DefaultValue="https://localhost/apps/command-demo/images/red-80.png"/>
+        <bt:Image id="red-icon-16" DefaultValue="YOUR_WEB_SERVER/images/red-16.png"/>
+        <bt:Image id="red-icon-32" DefaultValue="YOUR_WEB_SERVER/images/red-32.png"/>
+        <bt:Image id="red-icon-80" DefaultValue="YOUR_WEB_SERVER/images/red-80.png"/>
         <!-- Green icon -->
-        <bt:Image id="green-icon-16" DefaultValue="https://localhost/apps/command-demo/images/green-16.png"/>
-        <bt:Image id="green-icon-32" DefaultValue="https://localhost/apps/command-demo/images/green-32.png"/>
-        <bt:Image id="green-icon-80" DefaultValue="https://localhost/apps/command-demo/images/green-80.png"/>
+        <bt:Image id="green-icon-16" DefaultValue="YOUR_WEB_SERVER/images/green-16.png"/>
+        <bt:Image id="green-icon-32" DefaultValue="YOUR_WEB_SERVER/images/green-32.png"/>
+        <bt:Image id="green-icon-80" DefaultValue="YOUR_WEB_SERVER/images/green-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://localhost/apps/command-demo/FunctionFile/Functions.html"/>
-        <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost/apps/command-demo/AppRead/TaskPane/TaskPane.html"/>
-        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost/apps/command-demo/AppCompose/TaskPane/TaskPane.html"/>
+        <bt:Url id="functionFile" DefaultValue="YOUR_WEB_SERVER/FunctionFile/Functions.html"/>
+        <bt:Url id="readTaskPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppRead/TaskPane/TaskPane.html"/>
+        <bt:Url id="composeTaskPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppCompose/TaskPane/TaskPane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
