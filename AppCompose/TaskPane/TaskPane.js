@@ -14,7 +14,6 @@
   
   function insertText() {
     var textToInsert = $('#textToInsert').val();
-    app.showNotification("Text value", textToInsert);
     Office.context.mailbox.item.body.setSelectedDataAsync(
       textToInsert, 
       { coercionType: Office.CoercionType.Text }, 
@@ -23,7 +22,7 @@
           app.showNotification("Success", "\"" + textToInsert + "\" inserted successfully.");
         }
         else {
-          app.showNotification("Error", "Failed to insert \"" + text + "\": " + asyncResult.error.message);
+          app.showNotification("Error", "Failed to insert \"" + textToInsert + "\": " + asyncResult.error.message);
         }
       });
   }

@@ -1,0 +1,121 @@
+﻿<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license at the bottom of this file. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <title></title>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+  
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+  
+  <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
+  
+  <script src="../../Scripts/jquery.fabric.js" type="text/javascript"></script>
+  
+  <link href="../App.css" rel="stylesheet" type="text/css" />
+  <script src="../App.js" type="text/javascript"></script>
+  <link href="Home.css" rel="stylesheet" type="text/css" />
+  <script src="Home.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="content-header">
+    <div class="padding">
+      <h1 class="ms-font-xl ms-fontWeight-light ms-fontColor-white">Insert text</h1>
+    </div>
+  </div>
+  <div id="content-main" class="ms-Grid">
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-u-sm12">
+        <div class="ms-Grid">
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm12">
+              <h2 class="ms-font-l">Pre-canned text</h2>
+            </div>
+          </div>
+          <div class="ms-Grid-row button-row">
+            <div class="ms-Grid-col ms-u-sm12">
+              <button id="insertDefault" class="ms-Button stretch">
+                <span class="ms-Button-label">Default message</span>
+              </button>
+            </div>
+          </div>
+          <div class="ms-Grid-row button-row">
+            <div class="ms-Grid-col ms-u-sm12">
+              <button id="insertMsg1" class="ms-Button stretch">
+                <span class="ms-Button-label">Hello World!</span>
+              </button>
+            </div>
+          </div>
+          <div class="ms-Grid-row button-row">
+            <div class="ms-Grid-col ms-u-sm12">
+              <button id="insertMsg2" class="ms-Button stretch">
+                <span class="ms-Button-label">Add-ins are cool!</span>
+              </button>
+            </div>
+          </div>
+          <div class="ms-Grid-row button-row">
+            <div class="ms-Grid-col ms-u-sm12">
+              <button id="insertMsg3" class="ms-Button stretch">
+                <span class="ms-Button-label">Visit dev.outlook.com</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-u-sm12">
+        <div class="ms-Grid">
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm12">
+              <h2 class="ms-font-l">Custom text</h2>
+            </div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm12">
+              <div class="ms-TextField">
+                <label class="ms-Label">Text to insert:</label>
+                <input id="textToInsert" class="ms-TextField-field" />
+                <span class="ms-TextField-description">Enter the text you want to insert here.</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm12">
+              <button id="insertCustom" class="ms-Button">
+                <span class="ms-Button-label">Insert</span>
+                <span class="ms-Button-description">Inserts the text entered into the body of the message.</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- MIT License: 
+ 
+ Permission is hereby granted, free of charge, to any person obtaining 
+ a copy of this software and associated documentation files (the 
+ ""Software""), to deal in the Software without restriction, including 
+ without limitation the rights to use, copy, modify, merge, publish, 
+ distribute, sublicense, and/or sell copies of the Software, and to 
+ permit persons to whom the Software is furnished to do so, subject to 
+ the following conditions: 
+ 
+ The above copyright notice and this permission notice shall be 
+ included in all copies or substantial portions of the Software. 
+ 
+ THE SOFTWARE IS PROVIDED ""AS IS"", WITHOUT WARRANTY OF ANY KIND, 
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
+ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
