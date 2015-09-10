@@ -268,6 +268,114 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
+          
+          <!-- Message read form -->
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="msgReadDemoGroup">
+                <Label resid="groupLabel" />
+                <Tooltip resid="groupTooltip" />
+                <!-- Function (UI-less) button -->
+                <Control xsi:type="Button" id="msgReadFunctionButton">
+                  <Label resid="funcReadButtonLabel" />
+                  <Tooltip resid="funcReadButtonTooltip" />
+                  <Supertip>
+                    <Title resid="funcReadSuperTipTitle" />
+                    <Description resid="funcReadSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="blue-icon-16" />
+                    <bt:Image size="32" resid="blue-icon-32" />
+                    <bt:Image size="80" resid="blue-icon-80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>getSubject</FunctionName>
+                  </Action>
+                </Control>
+                <!-- Menu (dropdown) button -->
+                <Control xsi:type="Menu" id="msgReadMenuButton">
+                  <Label resid="menuReadButtonLabel" />
+                  <Tooltip resid="menuReadButtonTooltip" />
+                  <Supertip>
+                    <Title resid="menuReadSuperTipTitle" />
+                    <Description resid="menuReadSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="red-icon-16" />
+                    <bt:Image size="32" resid="red-icon-32" />
+                    <bt:Image size="80" resid="red-icon-80" />
+                  </Icon>
+                  <Items>
+                    <Item id="msgReadMenuItem1">
+                      <Label resid="menuItem1ReadLabel" />
+                      <Tooltip resid="menuItem1ReadTip" />
+                      <Supertip>
+                        <Title resid="menuItem1ReadLabel" />
+                        <Description resid="menuItem1ReadTip" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="red-icon-16" />
+                        <bt:Image size="32" resid="red-icon-32" />
+                        <bt:Image size="80" resid="red-icon-80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>getItemClass</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id="msgReadMenuItem2">
+                      <Label resid="menuItem2ReadLabel" />
+                      <Tooltip resid="menuItem2ReadTip" />
+                      <Supertip>
+                        <Title resid="menuItem2ReadLabel" />
+                        <Description resid="menuItem2ReadTip" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="red-icon-16" />
+                        <bt:Image size="32" resid="red-icon-32" />
+                        <bt:Image size="80" resid="red-icon-80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>getDateTimeCreated</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id="msgReadMenuItem3">
+                      <Label resid="menuItem3ReadLabel" />
+                      <Tooltip resid="menuItem3ReadTip" />
+                      <Supertip>
+                        <Title resid="menuItem3ReadLabel" />
+                        <Description resid="menuItem3ReadTip" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="red-icon-16" />
+                        <bt:Image size="32" resid="red-icon-32" />
+                        <bt:Image size="80" resid="red-icon-80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>getItemID</FunctionName>
+                      </Action>
+                    </Item>
+                  </Items>
+                </Control>
+                <!-- Task pane button -->
+                <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                  <Label resid="paneReadButtonLabel" />
+                  <Tooltip resid="paneReadButtonTooltip" />
+                  <Supertip>
+                    <Title resid="paneReadSuperTipTitle" />
+                    <Description resid="paneReadSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="green-icon-16" />
+                    <bt:Image size="32" resid="green-icon-32" />
+                    <bt:Image size="80" resid="green-icon-80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="readTaskPaneUrl" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
 
         </DesktopFormFactor>
       </Host>
@@ -309,9 +417,17 @@
         <bt:String id="menuItem3ComposeLabel" DefaultValue="Visit dev.outlook.com"/>
 
         <!-- Read mode -->
-        <bt:String id="menuItem1ReadLabel" DefaultValue="Get Subject"/>
-        <bt:String id="menuItem2ReadLabel" DefaultValue="Get Body"/>
-        <bt:String id="menuItem3ReadLabel" DefaultValue="Get Sender"/>
+        <bt:String id="funcReadButtonLabel" DefaultValue="Get subject"/>
+        <bt:String id="menuReadButtonLabel" DefaultValue="Get property"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="Display all properties"/>
+
+        <bt:String id="funcReadSuperTipTitle" DefaultValue="Gets the subject of the message or appointment"/>
+        <bt:String id="menuReadSuperTipTitle" DefaultValue="Choose a property to get"/>
+        <bt:String id="paneReadSuperTipTitle" DefaultValue="Get all properties"/>
+        
+        <bt:String id="menuItem1ReadLabel" DefaultValue="Get item class"/>
+        <bt:String id="menuItem2ReadLabel" DefaultValue="Get date time created"/>
+        <bt:String id="menuItem3ReadLabel" DefaultValue="Get item ID"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="groupTooltip" DefaultValue="Add-in Demo of the different command types"/>
@@ -329,15 +445,17 @@
         <bt:String id="menuItem3ComposeTip" DefaultValue="Inserts Visit dev.outlook.com into the body of the message or appointment." />
 
         <!-- Read mode -->
-        <!--
-        <bt:String id="funcReadButtonTooltip" DefaultValue="Inserts text into body of the message"/>
-        <bt:String id="dropdownReadButtonTooltip" DefaultValue="Inserts your choice of text into body of the message"/>
-        <bt:String id="openPaneReadButtonTooltip" DefaultValue="Opens a pane where you can enter text to insert in the body of the message"/>
+        <bt:String id="funcReadButtonTooltip" DefaultValue="Gets the subject of the message or appointment and displays it in the info bar"/>
+        <bt:String id="menuReadButtonTooltip" DefaultValue="Gets the selected property of the message or appointment and displays it in the info bar"/>
+        <bt:String id="paneReadButtonTooltip" DefaultValue="Opens a pane displaying all available properties of the message or appointment"/>
         
-        <bt:String id="funcSuperTipDescription" DefaultValue="This is the Super Tip Description of the function button."/>
-        <bt:String id="dropdownSuperTipDescription" DefaultValue="This is the Super Tip Description of the dropdown button."/>
-        <bt:String id="openPaneSuperTipDescription" DefaultValue="This is the Super Tip Description of the open pane button."/>
-        -->
+        <bt:String id="funcReadSuperTipDescription" DefaultValue="Gets the subject of the message or appointment and displays it in the info bar. This is an example of a function button."/>
+        <bt:String id="menuReadSuperTipDescription" DefaultValue="Gets the selected property of the message or appointment and displays it in the info bar. This is an example of a drop-down menu button."/>
+        <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens a pane displaying all available properties of the message or appointment. This is an example of a button that opens a task pane."/>
+        
+        <bt:String id="menuItem1ReadTip" DefaultValue="Gets the item class of the message or appointment and displays it in the info bar." />
+        <bt:String id="menuItem2ReadTip" DefaultValue="Gets the date and time the message or appointment was created and displays it in the info bar." />
+        <bt:String id="menuItem3ReadTip" DefaultValue="Gets the item ID of the message or appointment and displays it in the info bar." />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
