@@ -7,13 +7,13 @@
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
   <Id>7164e750-dc86-49c0-b548-1bac57abdc7c</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.0.0.1</Version>
   <ProviderName>Microsoft Outlook Dev Center</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Add-in Command Demo" />
   <Description DefaultValue="Adds command buttons to the ribbon in Outlook"/>
-  <IconUrl DefaultValue="YOUR_WEB_SERVER/images/demo-64.png" />
-  <HighResolutionIconUrl DefaultValue="YOUR_WEB_SERVER/images/demo-80.png" />
+  <IconUrl DefaultValue="YOUR_WEB_SERVER/images/blue-64.png" />
+  <HighResolutionIconUrl DefaultValue="YOUR_WEB_SERVER/images/blue-80.png" />
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
@@ -60,6 +60,16 @@
 
         <DesktopFormFactor>
           <FunctionFile resid="functionFile" />
+          
+          <!-- Custom pane, only applies to read form -->
+          <ExtensionPoint xsi:type="CustomPane">
+            <RequestedHeight>100</RequestedHeight> 
+            <SourceLocation resid="customPaneUrl"/>
+            <Rule xsi:type="RuleCollection" Mode="Or">
+              <Rule xsi:type="ItemIs" ItemType="Message"/>
+              <Rule xsi:type="ItemIs" ItemType="AppointmentAttendee"/>
+            </Rule>
+          </ExtensionPoint>
           
           <!-- Message compose form -->
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
@@ -516,6 +526,7 @@
         <bt:Url id="functionFile" DefaultValue="YOUR_WEB_SERVER/FunctionFile/Functions.html"/>
         <bt:Url id="readTaskPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppRead/TaskPane/TaskPane.html"/>
         <bt:Url id="composeTaskPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppCompose/TaskPane/TaskPane.html"/>
+        <bt:Url id="customPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppRead/CustomPane/CustomPane.html"/>"
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
