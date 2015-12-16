@@ -1,0 +1,13 @@
+{
+  "name":"command-demo",
+  "version": "0.1.0",
+  "scripts": {
+  },
+  "devDependencies": {
+    "chalk": "^1.1.1",
+    "gulp": "^3.9.0",
+    "gulp-webserver": "^0.9.1",
+    "minimist": "^1.2.0",
+    "xmllint": "git+https://github.com/kripken/xml.js.git"
+  }
+}
