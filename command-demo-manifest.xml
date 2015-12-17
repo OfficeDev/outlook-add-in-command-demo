@@ -523,16 +523,10 @@
         <bt:Image id="green-icon-80" DefaultValue="https://localhost:8443/images/green-80.png"/>
       </bt:Images>
       <bt:Urls>
-<<<<<<< HEAD
-        <bt:Url id="functionFile" DefaultValue="YOUR_WEB_SERVER/FunctionFile/Functions.html"/>
-        <bt:Url id="readTaskPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppRead/TaskPane/TaskPane.html"/>
-        <bt:Url id="composeTaskPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppCompose/TaskPane/TaskPane.html"/>
-        <bt:Url id="customPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppRead/CustomPane/CustomPane.html"/>"
-=======
         <bt:Url id="functionFile" DefaultValue="https://localhost:8443/FunctionFile/Functions.html"/>
         <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:8443/AppRead/TaskPane/TaskPane.html"/>
         <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:8443/AppCompose/TaskPane/TaskPane.html"/>
->>>>>>> 3233ac9d5f33f982e11b68ad0cc60cf37ec77eb9
+        <bt:Url id="customPaneUrl" DefaultValue="https://localhost:8443/AppRead/CustomPane/CustomPane.html"/>"
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
