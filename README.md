@@ -60,11 +60,17 @@ In order to run this sample, you will need the following:
 
 ## How's it all work?
 
-The key part of the sample is the structure of the manifest file. The manifest uses the same version 1.1 schema as any Office add-in's manifest. However, there is a new section of the manifest called `VersionOverrides`. This section holds all of the information that clients that support add-in commands (currently only Outlook 2016) need to invoke the add-in from a ribbon button. By putting this in a completely separate section, the manifest can also include the original markup to enable the add-in to be loaded by clients that do not support the add-in command model. You can see this in action by loading the add-in in Outlook 2013 or Outlook on the web.
+The key part of the sample is the structure of the manifest file. The manifest uses the same version 1.1 schema as any Office add-in's manifest. However, there is a new section of the manifest called `VersionOverrides`. This section holds all of the information that clients that support add-in commands (**currently only Outlook 2016**) need to invoke the add-in from a ribbon button. By putting this in a completely separate section, the manifest can also include the original markup to enable the add-in to be loaded by clients that do not support the add-in command model. You can see this in action by loading the add-in in Outlook 2013 or Outlook on the web.
 
 ### The Add-in Command Demo add-in loaded in Outlook on the web ###
 
-![The add-in loaded in Outlook on the web](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/outlook-on-web.PNG)
+#### Read mail form ####
+
+![The add-in loaded in Outlook on the web's read mail form](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/outlook-on-web-read.PNG)
+
+#### Compose mail form ####
+
+![The add-in loaded in Outlook on the web's compose mail form](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/outlook-on-web.PNG)
 
 Within the `VersionOverrides` element, there are three child elements, `Requirements`, `Resources`, and `Hosts`. The `Requirements` element specifies the minimum API version required by the add-in when loaded by clients that support the add-in model. The `Resources` element contains information about icons, strings, and what HTML file to load for the add-in. The `Hosts` section specifies how and when the add-in is loaded.
 
