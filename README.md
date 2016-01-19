@@ -115,7 +115,6 @@ This is created by setting the `xsi:type` attribute of a `Control` element to `B
 <!-- Function (UI-less) button -->
 <Control xsi:type="Button" id="msgComposeFunctionButton">
   <Label resid="funcComposeButtonLabel" />
-  <Tooltip resid="funcComposeButtonTooltip" />
   <Supertip>
     <Title resid="funcComposeSuperTipTitle" />
     <Description resid="funcComposeSuperTipDescription" />
@@ -139,7 +138,6 @@ This is created by setting the `xsi:type` attribute of a `Control` element to `M
 <!-- Menu (dropdown) button -->
 <Control xsi:type="Menu" id="msgComposeMenuButton">
   <Label resid="menuComposeButtonLabel" />
-  <Tooltip resid="menuComposeButtonTooltip" />
   <Supertip>
     <Title resid="menuComposeSuperTipTitle" />
     <Description resid="menuComposeSuperTipDescription" />
@@ -152,7 +150,6 @@ This is created by setting the `xsi:type` attribute of a `Control` element to `M
   <Items>
     <Item id="msgComposeMenuItem1">
       <Label resid="menuItem1ComposeLabel" />
-      <Tooltip resid="menuItem1ComposeTip" />
       <Supertip>
         <Title resid="menuItem1ComposeLabel" />
         <Description resid="menuItem1ComposeTip" />
@@ -168,7 +165,6 @@ This is created by setting the `xsi:type` attribute of a `Control` element to `M
     </Item>
     <Item id="msgComposeMenuItem2">
       <Label resid="menuItem2ComposeLabel" />
-      <Tooltip resid="menuItem2ComposeTip" />
       <Supertip>
         <Title resid="menuItem2ComposeLabel" />
         <Description resid="menuItem2ComposeTip" />
@@ -184,7 +180,6 @@ This is created by setting the `xsi:type` attribute of a `Control` element to `M
     </Item>
     <Item id="msgComposeMenuItem3">
       <Label resid="menuItem3ComposeLabel" />
-      <Tooltip resid="menuItem3ComposeTip" />
       <Supertip>
         <Title resid="menuItem3ComposeLabel" />
         <Description resid="menuItem3ComposeTip" />
@@ -210,7 +205,6 @@ This is created by setting the `xsi:type` attribute of a `Control` element to `B
 <!-- Task pane button -->
 <Control xsi:type="Button" id="msgComposeOpenPaneButton">
   <Label resid="paneComposeButtonLabel" />
-  <Tooltip resid="paneComposeButtonTooltip" />
   <Supertip>
     <Title resid="paneComposeSuperTipTitle" />
     <Description resid="paneComposeSuperTipDescription" />
