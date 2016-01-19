@@ -498,7 +498,7 @@
         <bt:Url id="functionFile" DefaultValue="https://localhost:8443/FunctionFile/Functions.html"/>
         <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:8443/AppRead/TaskPane/TaskPane.html"/>
         <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:8443/AppCompose/TaskPane/TaskPane.html"/>
-        <bt:Url id="customPaneUrl" DefaultValue="https://localhost:8443/AppRead/CustomPane/CustomPane.html"/>"
+        <bt:Url id="customPaneUrl" DefaultValue="https://localhost:8443/AppRead/CustomPane/CustomPane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
