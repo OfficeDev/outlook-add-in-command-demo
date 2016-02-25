@@ -1,182 +1,165 @@
-<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license at the bottom of this file. -->
+﻿<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license at the bottom of this file. -->
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <title></title>
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
-  
-  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
-  
-  <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
-  <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
-  
-  <script src="../../Scripts/jquery.fabric.js" type="text/javascript"></script>
-  
-  <link href="../App.css" rel="stylesheet" type="text/css" />
-  <script src="../App.js" type="text/javascript"></script>
-  
-  <script src="TaskPane.js" type="text/javascript"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
+
+    <script src="../../Scripts/jquery.fabric.js" type="text/javascript"></script>
+
+    <link href="../App.css" rel="stylesheet" type="text/css" />
+    <script src="../App.js" type="text/javascript"></script>
+
+    <!-- JS specific for this page --> >
+    <script src="TaskPane.js" type="text/javascript"></script>
 </head>
 <body>
-  <div id="content-header">
-    <div class="padding">
-      <h1 class="ms-font-xl ms-fontWeight-light ms-fontColor-white">All properties</h1>
-    </div>
-  </div>
-  <div id="content-main" class="ms-Grid">
-    <div class="ms-Grid-row">
-      <div class="ms-Grid-col ms-u-sm12">
-        <h2 class="ms-font-l">Standard properties</h2>
-        <div class="ms-Table">
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell">Property</span>
-            <span class="ms-Table-cell">Value</span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">dateTimeCreated</span>
-            <span id="dateTimeCreated" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">dateTimeModified</span>
-            <span id="dateTimeModified" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">itemClass</span>
-            <span id="itemClass" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">itemId</span>
-            <span id="itemId" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">itemType</span>
-            <span id="itemType" class="ms-Table-cell"></span>
-          </div>
+    <div id="content-header">
+        <div class="padding">
+            <h1 class="ms-font-xl ms-fontWeight-light ms-fontColor-white">Incident Drilldown </h1>
         </div>
-      </div>
     </div>
-    <div id="message-props" class="ms-Grid-row hidden">
-      <div class="ms-Grid-col ms-u-sm12">
-        <h2 class="ms-font-l">Message-specific properties</h2>
-        <div class="ms-Table">
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell">Property</span>
-            <span class="ms-Table-cell">Value</span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">attachments</span>
-            <span id="attachments" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">cc</span>
-            <span id="cc" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">conversationId</span>
-            <span id="conversationId" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">from</span>
-            <span id="from" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">internetMessageId</span>
-            <span id="internetMessageId" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">normalizedSubject</span>
-            <span id="normalizedSubject" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">sender</span>
-            <span id="sender" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">subject</span>
-            <span id="subject" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">to</span>
-            <span id="to" class="ms-Table-cell"></span>
-          </div>
+
+    <div id="content-main" class="ms-Grid">
+        <!--Content central to both messages and appointments-->
+        <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm12">
+                <h2 class="ms-font-l">Message Details</h2>
+                <div class="ms-Table">
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell">Property</span>
+                        <span class="ms-Table-cell">Value</span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Sender</span>
+                        <span id="messageSender" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Recipients: To</span>
+                        <span id="recipientsTo" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Recipients: CC</span>
+                        <span id="recipientsCC" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Recipients: BCC</span>
+                        <span id="recipientsBCC" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Message Subject</span>
+                        <span id="messageSubject" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Message Id</span>
+                        <span id="messageId" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Date Sent</span>
+                        <span id="dateSent" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Report Id</span>
+                        <span id="reportId" class="ms-Table-cell"></span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div id="appointment-props" class="ms-Grid-row hidden">
-      <div class="ms-Grid-col ms-u-sm12">
-        <h2 class="ms-font-l">Appointment-specific properties</h2>
-        <div class="ms-Table">
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell">Property</span>
-            <span class="ms-Table-cell">Value</span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">attachments</span>
-            <span id="appt-attachments" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">end</span>
-            <span id="end" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">location</span>
-            <span id="location" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">normalizedSubject</span>
-            <span id="appt-normalizedSubject" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">optionalAttendees</span>
-            <span id="optionalAttendees" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">organizer</span>
-            <span id="organizer" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">requiredAttendees</span>
-            <span id="requiredAttendees" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">resources</span>
-            <span id="resources" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">start</span>
-            <span id="start" class="ms-Table-cell"></span>
-          </div>
-          <div class="ms-Table-row">
-            <span class="ms-Table-cell ms-fontWeight-semibold">subject</span>
-            <span id="appt-subject" class="ms-Table-cell"></span>
-          </div>
+
+        <!-- message properites -->
+        <div id="message-props" class="ms-Grid-row hidden">
+            <div class="ms-Grid-col ms-u-sm12">
+                <h2 class="ms-font-l">Detection Details</h2>
+                <div class="ms-Table">
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell">Property</span>
+                        <span class="ms-Table-cell">Value</span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Initial Severity</span>
+                        <span id="initialSeverity" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Override?</span>
+                        <span id="override" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">Override Justification</span>
+                        <span id="overrideJustification" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell ms-fontWeight-semibold">False Positive?</span>
+                        <span id="falsePositive" class="ms-Table-cell"></span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- Details on the rule hits -->
+        <div id="rule-hit-props" class="ms-Grid-row hidden">
+            <div class="ms-Grid-col ms-u-sm12">
+                <h2 class="ms-font-l">Rule Hits</h2>
+                <div class="ms-Table">
+                    <div class="ms-Table-row">
+                        <span class="ms-Table-cell">Rule</span>
+                        <span class="ms-Table-cell">Classification Hit</span>
+                        <span class="ms-Table-cell">Count</span>
+                        <span class="ms-Table-cell">Action(s) Triggered</span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span id="rule1" class="ms-Table-cell ms-fontWeight-semibold"></span>
+                        <span id="dataClassification1" class="ms-Table-cell"></span>
+                        <span id="count1" class="ms-Table-cell"></span>
+                        <span id="action1" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span id="rule2" class="ms-Table-cell ms-fontWeight-semibold"></span>
+                        <span id="dataClassification2" class="ms-Table-cell"></span>
+                        <span id="count2" class="ms-Table-cell"></span>
+                        <span id="action2" class="ms-Table-cell"></span>
+                    </div>
+                    <div class="ms-Table-row">
+                        <span id="rule3" class="ms-Table-cell ms-fontWeight-semibold"></span>
+                        <span id="dataClassification3" class="ms-Table-cell"></span>
+                        <span id="count3" class="ms-Table-cell"></span>
+                        <span id="action3" class="ms-Table-cell"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--appointment properties-->
+        <div id="appointment-props" class="ms-Grid-row hidden">
+        </div>
     </div>
-  </div>
 </body>
 </html>
 
-<!-- MIT License: 
- 
- Permission is hereby granted, free of charge, to any person obtaining 
- a copy of this software and associated documentation files (the 
- ""Software""), to deal in the Software without restriction, including 
- without limitation the rights to use, copy, modify, merge, publish, 
- distribute, sublicense, and/or sell copies of the Software, and to 
- permit persons to whom the Software is furnished to do so, subject to 
- the following conditions: 
- 
- The above copyright notice and this permission notice shall be 
- included in all copies or substantial portions of the Software. 
- 
- THE SOFTWARE IS PROVIDED ""AS IS"", WITHOUT WARRANTY OF ANY KIND, 
- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
- LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
- OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+<!-- MIT License:
+
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ ""Software""), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED ""AS IS"", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -->
