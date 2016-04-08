@@ -20,9 +20,11 @@ In order to run this sample, you will need the following:
   1. Use `gulp-webserver` (requires NPM):
     1. Open your command prompt in the directory where the `package.json` file is installed and run `npm install`.
     1. Run `gulp serve-static` to start a web server in the current directory.
-1. Logon to your email account with a browser at either https://outlook.office365.com (for Office 365), or https://www.outlook.com (for Outlook.com). Click on the gear icon in the upper-right corner, then click **Manage add-ins**.
+1. Logon to your email account with a browser at either https://outlook.office365.com (for Office 365), or https://www.outlook.com (for Outlook.com). Click on the gear icon in the upper-right corner, then click **Options**.
     
-  ![The Manage add-ins menu item on https://www.outlook.com](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/outlook-manage-addins.PNG)
+  ![The Options menu item on https://www.outlook.com](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/outlook-manage-addins.PNG)
+
+1. In the left-hand navigation, expand **General**, then click **Manage add-ins**.
     
 1. In the add-in list, click the **+** icon and choose **Add from a file**.
 
