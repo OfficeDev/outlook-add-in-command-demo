@@ -100,6 +100,18 @@
     $('#itemId').text(item.itemId);
     $('#itemType').text(item.itemType);
     
+    item.body.getAsync('html', function(result){
+      if (result.status === 'succeeded') {
+        $('#bodyHtml').text(result.value);
+      }
+    });
+    
+    item.body.getAsync('text', function(result){
+      if (result.status === 'succeeded') {
+        $('#bodyText').text(result.value);
+      }
+    });
+    
     if (item.itemType == Office.MailboxEnums.ItemType.Message){
       loadMessageProps(item);
     }
