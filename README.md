@@ -20,6 +20,7 @@ In order to run this sample, you will need the following:
   1. Use `gulp-webserver` (requires NPM):
     1. Open your command prompt in the directory where the `package.json` file is installed and run `npm install`.
     1. Run `gulp serve-static` to start a web server in the current directory.
+    1. In order for Outlook to load the add-in, the SSL certificate used by `gulp-webserver` must be trusted. Open your browser and go to `https://localhost:8443/AppRead/TaskPane/TaskPane.html`. If you are prompted that "there is a problem with this website's security certificate" (IE or Edge), or that "the site's security certificate is not trusted" (Chrome), you need to add the certificate to your trusted root certification authorities. If you continue to the page in the browser, most browsers allow you to view and install the certificate. Once you install and restart your browser, you should be able to browse to `https://localhost:8443/AppRead/TaskPane/TaskPane.html` with no errors.
 1. Logon to your email account with a browser at either https://outlook.office365.com (for Office 365), or https://www.outlook.com (for Outlook.com). Click on the gear icon in the upper-right corner, then click **Manage add-ins**.
     
   ![The Manage add-ins menu item on https://www.outlook.com](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/outlook-manage-addins.PNG)
