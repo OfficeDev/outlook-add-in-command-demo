@@ -61,16 +61,6 @@
         <DesktopFormFactor>
           <FunctionFile resid="functionFile" />
           
-          <!-- Custom pane, only applies to read form -->
-          <ExtensionPoint xsi:type="CustomPane">
-            <RequestedHeight>100</RequestedHeight> 
-            <SourceLocation resid="customPaneUrl"/>
-            <Rule xsi:type="RuleCollection" Mode="Or">
-              <Rule xsi:type="ItemIs" ItemType="Message"/>
-              <Rule xsi:type="ItemIs" ItemType="AppointmentAttendee"/>
-            </Rule>
-          </ExtensionPoint>
-          
           <!-- Message compose form -->
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
@@ -498,7 +488,6 @@
         <bt:Url id="functionFile" DefaultValue="https://localhost:8443/FunctionFile/Functions.html"/>
         <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:8443/AppRead/TaskPane/TaskPane.html"/>
         <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:8443/AppCompose/TaskPane/TaskPane.html"/>
-        <bt:Url id="customPaneUrl" DefaultValue="https://localhost:8443/AppRead/CustomPane/CustomPane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
