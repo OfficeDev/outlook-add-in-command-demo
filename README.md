@@ -21,33 +21,49 @@ In order to run this sample, you will need the following:
     1. Open your command prompt in the directory where the `package.json` file is installed and run `npm install`.
     1. Run `gulp serve-static` to start a web server in the current directory.
     1. In order for Outlook to load the add-in, the SSL certificate used by `gulp-webserver` must be trusted. Open your browser and go to `https://localhost:8443/AppRead/TaskPane/TaskPane.html`. If you are prompted that "there is a problem with this website's security certificate" (IE or Edge), or that "the site's security certificate is not trusted" (Chrome), you need to add the certificate to your trusted root certification authorities. If you continue to the page in the browser, most browsers allow you to view and install the certificate. Once you install and restart your browser, you should be able to browse to `https://localhost:8443/AppRead/TaskPane/TaskPane.html` with no errors.
-1. Logon to your email account with a browser at either https://outlook.office365.com (for Office 365), or https://www.outlook.com (for Outlook.com). Click on the gear icon in the upper-right corner, then click **Options**.
-    
-  ![The Options menu item on https://www.outlook.com](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/outlook-manage-addins.PNG)
+1. Logon to your email account with a browser at either https://outlook.office365.com (for Office 365), or https://www.outlook.com (for Outlook.com). Click on the gear icon in the upper-right corner.
 
-1. In the left-hand navigation, expand **General**, then click **Manage add-ins**.
-    
-1. In the add-in list, click the **+** icon and choose **Add from a file**.
+    - If there is a menu item called **Manage integrations**, follow these steps:
+        1. Click **Manage integrations**.
 
-  ![The Add from file menu item in the add-in list](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/addin-list.PNG)
+            ![The Manage integrations menu item on https://www.outlook.com](./readme-images/outlook-manage-integrations.PNG)
 
-1. Click **Browse** and browse to the `command-demo-manifest.xml` file on your development machine. Click **Next**.
+        1. Click the text **Click here to add a custom add-in**, then choose **Add from file...**.
 
-  ![The Add add-in from a file dialog](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/browse-manifest.PNG)
+            ![The custom add-in menu on https://www.outlook.com](./readme-images/integrations-add-from-file.PNG)
 
-1. On the confirmation screen, you will see a warning that the add-in is not from the Office Store and hasn't been verified by Microsoft. Click **Install**.
-1. You should see a success message: **You've added an add-in for Outlook**. Click OK.
+        1. Browse to the `command-demo-manifest.xml` file on your development machine. Click **Open**.
+
+        1. Review the warning and click **Install**.
+
+    - If there is not a menu item called **Manage integrations**, follow these steps:
+        1. Click **Options**.
+            
+            ![The Options menu item on https://www.outlook.com](./readme-images/outlook-manage-addins.PNG)
+
+        1. In the left-hand navigation, expand **General**, then click **Manage add-ins**.
+            
+        1. In the add-in list, click the **+** icon and choose **Add from a file**.
+
+            ![The Add from file menu item in the add-in list](./readme-images/addin-list.PNG)
+
+        1. Click **Browse** and browse to the `command-demo-manifest.xml` file on your development machine. Click **Next**.
+
+            ![The Add add-in from a file dialog](./readme-images/browse-manifest.PNG)
+
+        1. On the confirmation screen, you will see a warning that the add-in is not from the Office Store and hasn't been verified by Microsoft. Click **Install**.
+        1. You should see a success message: **You've added an add-in for Outlook**. Click OK.
 
 ## Running the sample ##
 
 1. Open Outlook 2016 and connect to the email account where you installed the add-in.
 1. Open an existing message (either in the reading pane or in a separate window). Notice that the add-in has placed new buttons on the command ribbon.
   
-  ![The addin buttons on a read mail form in Outlook](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/read-mail.PNG)
+  ![The addin buttons on a read mail form in Outlook](./readme-images/read-mail.PNG)
   
 1. Create a new email. Notice that the add-in has placed new buttons on the command ribbon.
 
-  ![The addin buttons on a new mail form in Outlook](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/new-mail.PNG)
+  ![The addin buttons on a new mail form in Outlook](./readme-images/new-mail.PNG)
 
 ## Key components of the sample
 
@@ -69,11 +85,11 @@ The key part of the sample is the structure of the manifest file. The manifest u
 
 #### Read mail form ####
 
-![The add-in loaded in Outlook on the web's read mail form](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/outlook-on-web-read.PNG)
+![The add-in loaded in Outlook on the web's read mail form](./readme-images/outlook-on-web-read.PNG)
 
 #### Compose mail form ####
 
-![The add-in loaded in Outlook on the web's compose mail form](https://raw.githubusercontent.com/jasonjoh/command-demo/master/readme-images/outlook-on-web.PNG)
+![The add-in loaded in Outlook on the web's compose mail form](./readme-images/outlook-on-web.PNG)
 
 Within the `VersionOverrides` element, there are three child elements, `Requirements`, `Resources`, and `Hosts`. The `Requirements` element specifies the minimum API version required by the add-in when loaded by clients that support the add-in model. The `Resources` element contains information about icons, strings, and what HTML file to load for the add-in. The `Hosts` section specifies how and when the add-in is loaded.
 
