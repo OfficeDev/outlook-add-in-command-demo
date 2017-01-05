@@ -10,8 +10,26 @@
       $(document).ready(function () {
           app.initialize();
 
-          loadProps();
+          if (isPersistenceSupported()) {
+            // Set up ItemChanged event
+            Office.context.mailbox.addHandlerAsync(Office.EventType.ItemChanged, loadNewItem);
+          }
+
+          loadProps(Office.context.mailbox.item);
       });
+  };
+
+  function isPersistenceSupported() {
+    // This feature is part of the preview 1.5 req set
+    // Since 1.5 isn't fully implemented, just check that the 
+    // method is defined.
+    // Once 1.5 is implemented, we can replace this with
+    // Office.context.requirements.isSetSupported('Mailbox', 1.5)
+    return Office.context.mailbox.addHandlerAsync !== undefined;
+  };
+
+  function loadNewItem(eventArgs) {
+    loadProps(Office.context.mailbox.item);
   };
   
   // Take an array of AttachmentDetails objects and
@@ -91,8 +109,7 @@
   
   // Load properties from the Item base object, then load the
   // type-specific properties.
-  function loadProps() {
-    var item = Office.context.mailbox.item;
+  function loadProps(item) {
     
     $('#dateTimeCreated').text(item.dateTimeCreated.toLocaleString());
     $('#dateTimeModified').text(item.dateTimeModified.toLocaleString());
