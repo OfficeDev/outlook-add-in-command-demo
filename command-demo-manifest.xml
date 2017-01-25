@@ -958,6 +958,54 @@
             </ExtensionPoint>
 
           </DesktopFormFactor>
+
+          <MobileFormFactor>
+            <FunctionFile resid="functionFile" />
+
+            <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
+              <Group id="mobileMsgRead">
+                <Label resid="groupLabel" />
+                <Control xsi:type="MobileButton" id="mblReadFunctionButton">
+                  <Label resid="funcReadButtonLabel" />
+                  <Icon xsi:type="bt:MobileIconList">
+                    <bt:Image size="25" scale="1" resid="blue-icon-32" />
+                    <bt:Image size="25" scale="2" resid="blue-icon-32" />
+                    <bt:Image size="25" scale="3" resid="blue-icon-32" />
+
+                    <bt:Image size="32" scale="1" resid="blue-icon-32" />
+                    <bt:Image size="32" scale="2" resid="blue-icon-32" />
+                    <bt:Image size="32" scale="3" resid="blue-icon-32" />
+
+                    <bt:Image size="48" scale="1" resid="blue-icon-32" />
+                    <bt:Image size="48" scale="2" resid="blue-icon-32" />
+                    <bt:Image size="48" scale="3" resid="blue-icon-32" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>getSubject</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="MobileButton" id="mblTaskPane">
+                  <Label resid="paneReadButtonLabel" />
+                  <Icon xsi:type="bt:MobileIconList">
+                    <bt:Image size="25" scale="1" resid="green-icon-32" />
+                    <bt:Image size="25" scale="2" resid="green-icon-32" />
+                    <bt:Image size="25" scale="3" resid="green-icon-32" />
+
+                    <bt:Image size="32" scale="1" resid="green-icon-32" />
+                    <bt:Image size="32" scale="2" resid="green-icon-32" />
+                    <bt:Image size="32" scale="3" resid="green-icon-32" />
+
+                    <bt:Image size="48" scale="1" resid="green-icon-32" />
+                    <bt:Image size="48" scale="2" resid="green-icon-32" />
+                    <bt:Image size="48" scale="3" resid="green-icon-32" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="readTaskPaneUrl" />
+                  </Action>
+                </Control>
+              </Group>
+            </ExtensionPoint>
+          </MobileFormFactor>
         </Host>
       </Hosts>
 
