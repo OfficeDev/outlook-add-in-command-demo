@@ -29,13 +29,13 @@
         <!-- NOTE: Just reusing the read taskpane page that is invoked by the button
              on the ribbon in clients that support add-in commands. You can 
              use a completely different page if desired -->
-        <SourceLocation DefaultValue="https://localhost:8443/AppRead/TaskPane/TaskPane.html"/>
+        <SourceLocation DefaultValue="https://localhost:8443/AllPropsView/AllProps.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
     <Form xsi:type="ItemEdit">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:8443/AppCompose/Home/Home.html"/>
+        <SourceLocation DefaultValue="https://localhost:8443/NoCommands/NoCommands.html"/>
       </DesktopSettings>
     </Form>
   </FormSettings>
@@ -486,8 +486,8 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://localhost:8443/FunctionFile/Functions.html"/>
-        <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:8443/AppRead/TaskPane/TaskPane.html"/>
-        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:8443/AppCompose/TaskPane/TaskPane.html"/>
+        <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:8443/AllPropsView/AllProps.html"/>
+        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:8443/InsertTextPane/InsertText.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
@@ -1061,8 +1061,8 @@
         </bt:Images>
         <bt:Urls>
           <bt:Url id="functionFile" DefaultValue="https://localhost:8443/FunctionFile/Functions.html"/>
-          <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:8443/AppRead/TaskPane/TaskPane.html"/>
-          <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:8443/AppCompose/TaskPane/TaskPane.html"/>
+          <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:8443/AllPropsView/AllProps.html"/>
+          <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:8443/InsertTextPane/InsertText.html"/>
           <bt:Url id="restTaskPaneUrl" DefaultValue="https://localhost:8443/RestCaller/RestCaller.html"/>
         </bt:Urls>
         <bt:ShortStrings>
