@@ -1,0 +1,23 @@
+.content-main {
+  padding: 10px;
+}
+
+.code-box > pre {
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.get-item-button, .update-item-button {
+  width: 100%;
+}
+
+.token-view {
+  margin-top: 10px;
+}
+
+.ms-Spinner {
+  display: none;
+}

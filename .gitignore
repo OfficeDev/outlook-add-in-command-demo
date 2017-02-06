@@ -46,3 +46,4 @@ deploy.bat
 issues.md
 node_modules
 command-demo-manifest-deployed.xml
+debug.log

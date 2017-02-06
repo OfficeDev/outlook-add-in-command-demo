@@ -6,8 +6,8 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides"
   xsi:type="MailApp">
-  <Id>7164e750-dc86-49c0-b548-1bac57abdc7c</Id>
-  <Version>1.0.0.1</Version>
+  <Id>fc188889-7206-4d15-9968-7a4966f7f4ca</Id>
+  <Version>1.0.0.2</Version>
   <ProviderName>Microsoft Outlook Dev Center</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Add-in Command Demo" />
@@ -39,7 +39,7 @@
       </DesktopSettings>
     </Form>
   </FormSettings>
-  <Permissions>ReadWriteItem</Permissions>
+  <Permissions>ReadWriteMailbox</Permissions>
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
     <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit" />
@@ -852,6 +852,22 @@
                       <SupportsPinning>true</SupportsPinning>
                     </Action>
                   </Control>
+
+                  <Control xsi:type="Button" id="msgReadRestPaneButton">
+                    <Label resid="restpaneReadButtonLabel" />
+                    <Supertip>
+                      <Title resid="restpaneReadSuperTipTitle" />
+                      <Description resid="restpaneReadSuperTipDescription" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="green-icon-16" />
+                      <bt:Image size="32" resid="green-icon-32" />
+                      <bt:Image size="80" resid="green-icon-80" />
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="restTaskPaneUrl" />
+                    </Action>
+                  </Control>
                 </Group>
               </OfficeTab>
             </ExtensionPoint>
@@ -1003,6 +1019,25 @@
                     <SourceLocation resid="readTaskPaneUrl" />
                   </Action>
                 </Control>
+                <Control xsi:type="MobileButton" id="mblRestPaneButton">
+                  <Label resid="restpaneReadButtonLabel" />
+                  <Icon xsi:type="bt:MobileIconList">
+                    <bt:Image size="25" scale="1" resid="green-icon-32" />
+                    <bt:Image size="25" scale="2" resid="green-icon-32" />
+                    <bt:Image size="25" scale="3" resid="green-icon-32" />
+
+                    <bt:Image size="32" scale="1" resid="green-icon-32" />
+                    <bt:Image size="32" scale="2" resid="green-icon-32" />
+                    <bt:Image size="32" scale="3" resid="green-icon-32" />
+
+                    <bt:Image size="48" scale="1" resid="green-icon-32" />
+                    <bt:Image size="48" scale="2" resid="green-icon-32" />
+                    <bt:Image size="48" scale="3" resid="green-icon-32" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="restTaskPaneUrl" />
+                  </Action>
+                </Control>
               </Group>
             </ExtensionPoint>
           </MobileFormFactor>
@@ -1028,6 +1063,7 @@
           <bt:Url id="functionFile" DefaultValue="https://localhost:8443/FunctionFile/Functions.html"/>
           <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:8443/AppRead/TaskPane/TaskPane.html"/>
           <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:8443/AppCompose/TaskPane/TaskPane.html"/>
+          <bt:Url id="restTaskPaneUrl" DefaultValue="https://localhost:8443/RestCaller/RestCaller.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
@@ -1048,10 +1084,12 @@
           <bt:String id="funcReadButtonLabel" DefaultValue="Get subject"/>
           <bt:String id="menuReadButtonLabel" DefaultValue="Get property"/>
           <bt:String id="paneReadButtonLabel" DefaultValue="Display all properties"/>
+          <bt:String id="restpaneReadButtonLabel" DefaultValue="Test REST Calls"/>
 
           <bt:String id="funcReadSuperTipTitle" DefaultValue="Gets the subject of the message or appointment"/>
           <bt:String id="menuReadSuperTipTitle" DefaultValue="Choose a property to get"/>
           <bt:String id="paneReadSuperTipTitle" DefaultValue="Get all properties"/>
+          <bt:String id="restpaneReadSuperTipTitle" DefaultValue="Open REST Test pane"/>
           
           <bt:String id="menuItem1ReadLabel" DefaultValue="Get item class"/>
           <bt:String id="menuItem2ReadLabel" DefaultValue="Get date time created"/>
@@ -1071,6 +1109,7 @@
           <bt:String id="funcReadSuperTipDescription" DefaultValue="Gets the subject of the message or appointment and displays it in the info bar. This is an example of a function button."/>
           <bt:String id="menuReadSuperTipDescription" DefaultValue="Gets the selected property of the message or appointment and displays it in the info bar. This is an example of a drop-down menu button."/>
           <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens a pane displaying all available properties of the message or appointment. This is an example of a button that opens a task pane."/>
+          <bt:String id="restpaneReadSuperTipDescription" DefaultValue="Opens a pane allowing you to test various REST API calls using the access token returned by the server."/>
           
           <bt:String id="menuItem1ReadTip" DefaultValue="Gets the item class of the message or appointment and displays it in the info bar." />
           <bt:String id="menuItem2ReadTip" DefaultValue="Gets the date and time the message or appointment was created and displays it in the info bar." />
