@@ -15,7 +15,7 @@ In order to run this sample, you will need the following:
 1. Download or fork the repository.
 1. Copy the add-in files to a web server. You have a couple of options:
   1. Manually upload to a server:
-    1. Upload the `AllPropsView`, `FunctionFile`, `Images`, `InsertTextPane`, `NoCommands`, `RestCaller` and `Scripts` directories to a directory on your web server.
+    1. Upload the `AllPropsView`, `Assets`, `FunctionFile`, `InsertTextPane`, `NoCommands`, and `RestCaller` directories to a directory on your web server.
     1. Open `command-demo-manifest.xml` in a text editor. Replace all instances of `https://localhost:8443` with the HTTPS URL of the directory where you uploaded the files in the previous step. Save your changes.
   1. Use `gulp-webserver` (requires NPM):
     1. Open your command prompt in the directory where the `package.json` file is installed and run `npm install`.
@@ -79,7 +79,7 @@ In order to run this sample, you will need the following:
 
 ## How's it all work?
 
-The key part of the sample is the structure of the manifest file. The manifest uses the same version 1.1 schema as any Office add-in's manifest. However, there is a new section of the manifest called `VersionOverrides`. This section holds all of the information that clients that support add-in commands (**currently only Outlook 2016**) need to invoke the add-in from a ribbon button. By putting this in a completely separate section, the manifest can also include the original markup to enable the add-in to be loaded by clients that do not support the add-in command model. You can see this in action by loading the add-in in Outlook 2013 or Outlook on the web.
+The key part of the sample is the structure of the manifest file. The manifest uses the same version 1.1 schema as any Office add-in's manifest. However, there is a new section of the manifest called `VersionOverrides`. This section holds all of the information that clients that support add-in commands need to invoke the add-in from a ribbon button. By putting this in a completely separate section, the manifest can also include the original markup to enable the add-in to be loaded by clients that do not support the add-in command model. You can see this in action by loading the add-in in Outlook 2013 or Outlook on the web.
 
 ### The Add-in Command Demo add-in loaded in Outlook on the web ###
 

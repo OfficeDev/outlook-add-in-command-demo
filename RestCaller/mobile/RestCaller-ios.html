@@ -7,17 +7,17 @@
   <title></title>
   <link rel="stylesheet" href="../../node_modules/framework7/dist/css/framework7.ios.min.css" />
   <link rel="stylesheet" href="../../node_modules/framework7/dist/css/framework7.ios.colors.min.css" />
+  <link rel="stylesheet" href="../../node_modules/framework7/dist/css/framework7-icons.css" />
 
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js" type="text/javascript"></script>
   
   <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
 
-  <script src="../../node_modules/framework7/dist/js/framework7.min.js" type="text/javascript"></script>
+  <script src="../../Assets/Scripts/fw7/framework7.min.js" type="text/javascript"></script>
   
-  <script src="../../Scripts/jwt-decode.min.js" type="text/javascript"></script>
+  <script src="../../Assets/Scripts/jwt-decode.min.js" type="text/javascript"></script>
 
   <link rel="stylesheet" href="RestCaller-ios.css" />  
-  <script src="..\RestCaller.js" type="text/javascript"></script>
   <script src="RestCaller-ios.js" type="text/javascript"></script>
 </head>
 <body class="framework7-root">
@@ -117,13 +117,16 @@
     </div>
     <div class="toolbar tabbar tabbar-labels">
       <div class="toolbar-inner">
-        <a href="#get-item-view" class="tab-link">
+        <a href="#get-item-view" class="tab-link active">
+          <i class="f7-icons">cloud_download</i>
           <span class="tabbar-label">GET item</span>
         </a>
         <a href="#update-item-view" class="tab-link">
+          <i class="f7-icons">cloud_upload</i>
           <span class="tabbar-label">PATCH item</span>
         </a>
         <a href="#item-details-view" class="tab-link">
+          <i class="f7-icons">info</i>
           <span class="tabbar-label">REST details</span>
         </a>
       </div>

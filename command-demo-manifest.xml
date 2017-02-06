@@ -12,8 +12,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Add-in Command Demo" />
   <Description DefaultValue="Adds command buttons to the ribbon in Outlook"/>
-  <IconUrl DefaultValue="https://localhost:8443/images/blue-64.png" />
-  <HighResolutionIconUrl DefaultValue="https://localhost:8443/images/blue-80.png" />
+  <IconUrl DefaultValue="https://localhost:8443/assets/images/blue-64.png" />
+  <HighResolutionIconUrl DefaultValue="https://localhost:8443/assets/images/blue-80.png" />
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
@@ -472,17 +472,17 @@
     <Resources>
       <bt:Images>
         <!-- Blue icon -->
-        <bt:Image id="blue-icon-16" DefaultValue="https://localhost:8443/images/blue-16.png"/>
-        <bt:Image id="blue-icon-32" DefaultValue="https://localhost:8443/images/blue-32.png"/>
-        <bt:Image id="blue-icon-80" DefaultValue="https://localhost:8443/images/blue-80.png"/>
+        <bt:Image id="blue-icon-16" DefaultValue="https://localhost:8443/assets/images/blue-16.png"/>
+        <bt:Image id="blue-icon-32" DefaultValue="https://localhost:8443/assets/images/blue-32.png"/>
+        <bt:Image id="blue-icon-80" DefaultValue="https://localhost:8443/assets/images/blue-80.png"/>
         <!-- Red icon -->
-        <bt:Image id="red-icon-16" DefaultValue="https://localhost:8443/images/red-16.png"/>
-        <bt:Image id="red-icon-32" DefaultValue="https://localhost:8443/images/red-32.png"/>
-        <bt:Image id="red-icon-80" DefaultValue="https://localhost:8443/images/red-80.png"/>
+        <bt:Image id="red-icon-16" DefaultValue="https://localhost:8443/assets/images/red-16.png"/>
+        <bt:Image id="red-icon-32" DefaultValue="https://localhost:8443/assets/images/red-32.png"/>
+        <bt:Image id="red-icon-80" DefaultValue="https://localhost:8443/assets/images/red-80.png"/>
         <!-- Green icon -->
-        <bt:Image id="green-icon-16" DefaultValue="https://localhost:8443/images/green-16.png"/>
-        <bt:Image id="green-icon-32" DefaultValue="https://localhost:8443/images/green-32.png"/>
-        <bt:Image id="green-icon-80" DefaultValue="https://localhost:8443/images/green-80.png"/>
+        <bt:Image id="green-icon-16" DefaultValue="https://localhost:8443/assets/images/green-16.png"/>
+        <bt:Image id="green-icon-32" DefaultValue="https://localhost:8443/assets/images/green-32.png"/>
+        <bt:Image id="green-icon-80" DefaultValue="https://localhost:8443/assets/images/green-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://localhost:8443/FunctionFile/Functions.html"/>
@@ -1047,17 +1047,17 @@
       <Resources>
         <bt:Images>
           <!-- Blue icon -->
-          <bt:Image id="blue-icon-16" DefaultValue="https://localhost:8443/images/blue-16.png"/>
-          <bt:Image id="blue-icon-32" DefaultValue="https://localhost:8443/images/blue-32.png"/>
-          <bt:Image id="blue-icon-80" DefaultValue="https://localhost:8443/images/blue-80.png"/>
+          <bt:Image id="blue-icon-16" DefaultValue="https://localhost:8443/assets/images/blue-16.png"/>
+          <bt:Image id="blue-icon-32" DefaultValue="https://localhost:8443/assets/images/blue-32.png"/>
+          <bt:Image id="blue-icon-80" DefaultValue="https://localhost:8443/assets/images/blue-80.png"/>
           <!-- Red icon -->
-          <bt:Image id="red-icon-16" DefaultValue="https://localhost:8443/images/red-16.png"/>
-          <bt:Image id="red-icon-32" DefaultValue="https://localhost:8443/images/red-32.png"/>
-          <bt:Image id="red-icon-80" DefaultValue="https://localhost:8443/images/red-80.png"/>
+          <bt:Image id="red-icon-16" DefaultValue="https://localhost:8443/assets/images/red-16.png"/>
+          <bt:Image id="red-icon-32" DefaultValue="https://localhost:8443/assets/images/red-32.png"/>
+          <bt:Image id="red-icon-80" DefaultValue="https://localhost:8443/assets/images/red-80.png"/>
           <!-- Green icon -->
-          <bt:Image id="green-icon-16" DefaultValue="https://localhost:8443/images/green-16.png"/>
-          <bt:Image id="green-icon-32" DefaultValue="https://localhost:8443/images/green-32.png"/>
-          <bt:Image id="green-icon-80" DefaultValue="https://localhost:8443/images/green-80.png"/>
+          <bt:Image id="green-icon-16" DefaultValue="https://localhost:8443/assets/images/green-16.png"/>
+          <bt:Image id="green-icon-32" DefaultValue="https://localhost:8443/assets/images/green-32.png"/>
+          <bt:Image id="green-icon-80" DefaultValue="https://localhost:8443/assets/images/green-80.png"/>
         </bt:Images>
         <bt:Urls>
           <bt:Url id="functionFile" DefaultValue="https://localhost:8443/FunctionFile/Functions.html"/>
