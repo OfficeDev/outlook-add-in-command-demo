@@ -1035,7 +1035,7 @@
                     <bt:Image size="48" scale="3" resid="green-icon-32" />
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
-                    <SourceLocation resid="restTaskPaneUrl" />
+                    <SourceLocation resid="restMobileTaskPaneUrl" />
                   </Action>
                 </Control>
               </Group>
@@ -1064,6 +1064,7 @@
           <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:8443/AllPropsView/AllProps.html"/>
           <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:8443/InsertTextPane/InsertText.html"/>
           <bt:Url id="restTaskPaneUrl" DefaultValue="https://localhost:8443/RestCaller/RestCaller.html"/>
+          <bt:Url id="restMobileTaskPaneUrl" DefaultValue="https://localhost:8443/RestCaller/mobile/RestCallerMobile.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>

@@ -35,103 +35,103 @@
             REST details
           </li>
       </ul>
-        <div class="ms-Pivot-content" data-content="get-item">
-          <div class="ms-Grid">
-            <div class="ms-Grid-row">
-              <div class="ms-Grid-col ms-u-sm6">
-                <button class="ms-Button ms-Button--primary get-item-button is-disabled">
-                  <span class="ms-Button-label">Get Item</span>
-                </button>
-              </div>
-              <div class="ms-Grid-col ms-u-sm6">
-                  <div class="ms-Spinner ms-Spinner--large get-item-spinner">
-                    <div class="ms-Spinner-label">
-                      Loading...
-                    </div>
+      <div class="ms-Pivot-content" data-content="get-item">
+        <div class="ms-Grid">
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm6">
+              <button class="ms-Button ms-Button--primary get-item-button is-disabled">
+                <span class="ms-Button-label">Get Item</span>
+              </button>
+            </div>
+            <div class="ms-Grid-col ms-u-sm6">
+                <div class="ms-Spinner ms-Spinner--large get-item-spinner">
+                  <div class="ms-Spinner-label">
+                    Loading...
                   </div>
-              </div>
+                </div>
             </div>
           </div>
-          <div class="code-box item-display">
-            <pre><code></code></pre>
-          </div>
         </div>
-        <div class="ms-Pivot-content" data-content="update-item">
-          <div class="ms-Dropdown change-dropdown">
-            <label class="ms-Label">Change current item:</label>
-            <i class="ms-Dropdown-caretDown ms-Icon ms-Icon--ChevronDown"></i>
-            <select class="ms-Dropdown-select change-select">
-              <option>Choose a change&amp;hellip;</option>
-              <option>Mark unread</option>
-              <option>Flag for followup</option>
-              <option>Apply category</option>
-            </select>
-          </div>
-          <div class="code-box update-display">
-            <pre><code>Choose a change...</code></pre>
-          </div>
-          <div class="ms-Grid">
-            <div class="ms-Grid-row">
-              <div class="ms-Grid-col ms-u-sm6">
-                <button class="ms-Button ms-Button--primary update-item-button is-disabled">
-                  <span class="ms-Button-label">Update Item</span>
-                </button>
-              </div>
-              <div class="ms-Grid-col ms-u-sm6">
-                  <div class="ms-Spinner ms-Spinner--large update-item-spinner">
-                    <div class="ms-Spinner-label">
-                      Loading...
-                    </div>
+        <div class="code-box item-display">
+          <pre><code></code></pre>
+        </div>
+      </div>
+      <div class="ms-Pivot-content" data-content="update-item">
+        <div class="ms-Dropdown change-dropdown">
+          <label class="ms-Label">Change current item:</label>
+          <i class="ms-Dropdown-caretDown ms-Icon ms-Icon--ChevronDown"></i>
+          <select class="ms-Dropdown-select change-select">
+            <option>Choose a change&amp;hellip;</option>
+            <option>Mark unread</option>
+            <option>Flag for followup</option>
+            <option>Apply category</option>
+          </select>
+        </div>
+        <div class="code-box update-display">
+          <pre><code>Choose a change...</code></pre>
+        </div>
+        <div class="ms-Grid">
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm6">
+              <button class="ms-Button ms-Button--primary update-item-button is-disabled">
+                <span class="ms-Button-label">Update Item</span>
+              </button>
+            </div>
+            <div class="ms-Grid-col ms-u-sm6">
+                <div class="ms-Spinner ms-Spinner--large update-item-spinner">
+                  <div class="ms-Spinner-label">
+                    Loading...
                   </div>
-              </div>
+                </div>
             </div>
           </div>
         </div>
-        <div class="ms-Pivot-content" data-content="item-details">
-          <div class="diagnostics">
-            <table class="ms-Table">
-              <thead>
-                <tr>
-                  <th>Diagnostic field</th>
-                  <th>Value</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>hostName</td>
-                  <td class="hostname"></td>
-                </tr>
-                <tr>
-                  <td>hostVersion</td>
-                  <td class="hostversion"></td>
-                </tr>
-                <tr>
-                  <td>OWAView</td>
-                  <td class="owaview"></td>
-                </tr>
-              </tbody>
-            </table>
+      </div>
+      <div class="ms-Pivot-content" data-content="item-details">
+        <div class="diagnostics">
+          <table class="ms-Table">
+            <thead>
+              <tr>
+                <th>Diagnostic field</th>
+                <th>Value</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>hostName</td>
+                <td class="hostname"></td>
+              </tr>
+              <tr>
+                <td>hostVersion</td>
+                <td class="hostversion"></td>
+              </tr>
+              <tr>
+                <td>OWAView</td>
+                <td class="owaview"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="token-view">
+          <div class="ms-font-xl">Access Token</div>
+          <div class="ms-Toggle">
+            <span class="ms-Toggle-description">Parse token</span>
+            <input type="checkbox" id="parse-token-toggle" class="ms-Toggle-input" />
+            <label for="parse-token-toggle" class="ms-Toggle-field" tabindex="0" >
+              <span class="ms-Label ms-Label--off">Off</span>
+              <span class="ms-Label ms-Label--on">On</span>
+            </label>
           </div>
-          <div class="token-view">
-            <div class="ms-font-xl">Access Token</div>
-            <div class="ms-Toggle">
-              <span class="ms-Toggle-description">Parse token</span>
-              <input type="checkbox" id="parse-token-toggle" class="ms-Toggle-input" />
-              <label for="parse-token-toggle" class="ms-Toggle-field" tabindex="0" >
-                <span class="ms-Label ms-Label--off">Off</span>
-                <span class="ms-Label ms-Label--on">On</span>
-              </label>
-            </div>
-            <div class="code-box token-display">
-              <pre><code>loading...</code></pre>
-            </div>
-          </div>
-          <div class="resturl-view">
-            <div class="ms-font-xl">REST URL to item</div>
-            <div class="code-box resturl-display">
-              <pre><code>loading...</code></pre>
-            </div>
+          <div class="code-box token-display">
+            <pre><code>loading...</code></pre>
           </div>
         </div>
+        <div class="resturl-view">
+          <div class="ms-font-xl">REST URL to item</div>
+          <div class="code-box resturl-display">
+            <pre><code>loading...</code></pre>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
