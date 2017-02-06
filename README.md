@@ -15,12 +15,12 @@ In order to run this sample, you will need the following:
 1. Download or fork the repository.
 1. Copy the add-in files to a web server. You have a couple of options:
   1. Manually upload to a server:
-    1. Upload the `AppCompose`, `AppRead`, `FunctionFile`, `Images`, and `Scripts` directories to a directory on your web server.
+    1. Upload the `AllPropsView`, `FunctionFile`, `Images`, `InsertTextPane`, `NoCommands`, `RestCaller` and `Scripts` directories to a directory on your web server.
     1. Open `command-demo-manifest.xml` in a text editor. Replace all instances of `https://localhost:8443` with the HTTPS URL of the directory where you uploaded the files in the previous step. Save your changes.
   1. Use `gulp-webserver` (requires NPM):
     1. Open your command prompt in the directory where the `package.json` file is installed and run `npm install`.
     1. Run `gulp serve-static` to start a web server in the current directory.
-    1. In order for Outlook to load the add-in, the SSL certificate used by `gulp-webserver` must be trusted. Open your browser and go to `https://localhost:8443/AppRead/TaskPane/TaskPane.html`. If you are prompted that "there is a problem with this website's security certificate" (IE or Edge), or that "the site's security certificate is not trusted" (Chrome), you need to add the certificate to your trusted root certification authorities. If you continue to the page in the browser, most browsers allow you to view and install the certificate. Once you install and restart your browser, you should be able to browse to `https://localhost:8443/AppRead/TaskPane/TaskPane.html` with no errors.
+    1. In order for Outlook to load the add-in, the SSL certificate used by `gulp-webserver` must be trusted. Open your browser and go to `https://localhost:8443/AllPropsView/AllProps.html`. If you are prompted that "there is a problem with this website's security certificate" (IE or Edge), or that "the site's security certificate is not trusted" (Chrome), you need to add the certificate to your trusted root certification authorities. If you continue to the page in the browser, most browsers allow you to view and install the certificate. Once you install and restart your browser, you should be able to browse to `https://localhost:8443/AllPropsView/AllProps.html` with no errors.
 1. Logon to your email account with a browser at either https://outlook.office365.com (for Office 365), or https://www.outlook.com (for Outlook.com). Click on the gear icon in the upper-right corner.
 
     - If there is a menu item called **Manage integrations**, follow these steps:
@@ -70,12 +70,12 @@ In order to run this sample, you will need the following:
 - [```command-demo-manifest.xml```](command-demo-manifest.xml): The manifest file for the add-in.
 - [```FunctionFile/Functions.html```](FunctionFile/Functions.html): An empty HTML file to load `Functions.js` for clients that support add-in commands.
 - [```FunctionFile/Functions.js```](FunctionFile/Functions.js): The code that is invoked when the add-in command buttons are clicked.
-- [```AppCompose/TaskPane/TaskPane.html```](AppCompose/TaskPane/TaskPane.html): The HTML markup for the task pane UI displayed by the **Insert custom message** button.
-- [```AppCompose/TaskPane/TaskPane.js```](AppCompose/TaskPane/TaskPane.js): Code used by the task pane UI displayed by the **Insert custom message** button.
-- [```AppRead/TaskPane/TaskPane.html```](AppRead/TaskPane/TaskPane.html): The HTML markup for the task pane UI displayed by the **Display all properties** button. This is also displayed by clients in read mode that do not support add-in commands.
-- [```AppRead/TaskPane/TaskPane.js```](AppRead/TaskPane/TaskPane.js): Code used by the task pane UI displayed by the **Display all properties** button.
-- [```AppCompose/Home/Home.html```](AppCompose/Home/Home.html): The HTML file that is loaded and displayed by clients in compose mode that do not support add-in commands.
-- [```AppCompose/Home/Home.js```](AppCompose/Home/Home.js): The code that is invoked by clients in compose mode that do not support add-in commands.
+- [```InsertTextPane/InsertText.html```](InsertTextPane/InsertText.html): The HTML markup for the task pane UI displayed by the **Insert custom message** button.
+- [```InsertTextPane/InsertText.js```](InsertTextPane/InsertText.js): Code used by the task pane UI displayed by the **Insert custom message** button.
+- [```AllPropsView/AllProps.html```](AllPropsView/AllProps.html): The HTML markup for the task pane UI displayed by the **Display all properties** button. This is also displayed by clients in read mode that do not support add-in commands.
+- [```AllPropsView/AllProps.js```](AllPropsView/AllProps.js): Code used by the task pane UI displayed by the **Display all properties** button.
+- [```NoCommands/NoCommands.html```](NoCommands/NoCommands.html): The HTML file that is loaded and displayed by clients in compose mode that do not support add-in commands.
+- [```NoCommands/NoCommands.js```](NoCommands/NoCommands.js): The code that is invoked by clients in compose mode that do not support add-in commands.
 
 ## How's it all work?
 
