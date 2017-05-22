@@ -502,7 +502,7 @@
         
         <bt:String id="menuItem1ComposeLabel" DefaultValue="Hello World!"/>
         <bt:String id="menuItem2ComposeLabel" DefaultValue="Add-in commands are cool!"/>
-        <bt:String id="menuItem3ComposeLabel" DefaultValue="Visit dev.outlook.com"/>
+        <bt:String id="menuItem3ComposeLabel" DefaultValue="Visit Outlook Dev Center"/>
 
         <!-- Read mode -->
         <bt:String id="funcReadButtonLabel" DefaultValue="Get subject"/>
@@ -525,7 +525,7 @@
         
         <bt:String id="menuItem1ComposeTip" DefaultValue="Inserts Hello World! into the body of the message or appointment." />
         <bt:String id="menuItem2ComposeTip" DefaultValue="Inserts Add-in commands are cool! into the body of the message or appointment." />
-        <bt:String id="menuItem3ComposeTip" DefaultValue="Inserts Visit dev.outlook.com into the body of the message or appointment." />
+        <bt:String id="menuItem3ComposeTip" DefaultValue="Inserts Visit Outlook Dev Center into the body of the message or appointment." />
 
         <!-- Read mode -->
         <bt:String id="funcReadSuperTipDescription" DefaultValue="Gets the subject of the message or appointment and displays it in the info bar. This is an example of a function button."/>
@@ -1079,7 +1079,7 @@
           
           <bt:String id="menuItem1ComposeLabel" DefaultValue="Hello World!"/>
           <bt:String id="menuItem2ComposeLabel" DefaultValue="Add-in commands are cool!"/>
-          <bt:String id="menuItem3ComposeLabel" DefaultValue="Visit dev.outlook.com"/>
+          <bt:String id="menuItem3ComposeLabel" DefaultValue="Visit Outlook Dev Center"/>
 
           <!-- Read mode -->
           <bt:String id="funcReadButtonLabel" DefaultValue="Get subject"/>
@@ -1104,7 +1104,7 @@
           
           <bt:String id="menuItem1ComposeTip" DefaultValue="Inserts Hello World! into the body of the message or appointment." />
           <bt:String id="menuItem2ComposeTip" DefaultValue="Inserts Add-in commands are cool! into the body of the message or appointment." />
-          <bt:String id="menuItem3ComposeTip" DefaultValue="Inserts Visit dev.outlook.com into the body of the message or appointment." />
+          <bt:String id="menuItem3ComposeTip" DefaultValue="Inserts Visit Outlook Dev Center into the body of the message or appointment." />
 
           <!-- Read mode -->
           <bt:String id="funcReadSuperTipDescription" DefaultValue="Gets the subject of the message or appointment and displays it in the info bar. This is an example of a function button."/>

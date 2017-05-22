@@ -47,7 +47,7 @@
   }
   
   function insertMsg3() {
-    insertText("Visit https://dev.outlook.com today for all of your add-in development needs.");
+    insertText("Visit https://developer.microsoft.com/en-us/outlook/ today for all of your add-in development needs.");
   }
   
   function insertCustom() {

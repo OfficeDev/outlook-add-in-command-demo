@@ -45,7 +45,7 @@ function addMsg2ToBody(event) {
 }
 
 function addMsg3ToBody(event) {
-  addTextToBody("Visit https://dev.outlook.com today for all of your add-in development needs.", "red-icon-16", event);
+  addTextToBody("Visit https://developer.microsoft.com/en-us/outlook/ today for all of your add-in development needs.", "red-icon-16", event);
 }
 
 // Gets the subject of the item and displays it in the info bar.

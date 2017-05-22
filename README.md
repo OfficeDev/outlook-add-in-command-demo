@@ -246,7 +246,7 @@ This is created by setting the `xsi:type` attribute of a `Control` element to `B
 
 ## Additional resources
 
-- [Outlook Dev Center](https://dev.outlook.com)
+- [Outlook Dev Center](https://developer.microsoft.com/en-us/outlook/)
 - [Office Add-ins](https://msdn.microsoft.com/library/office/jj220060.aspx) documentation on MSDN
 - [More Add-in samples](https://github.com/OfficeDev?utf8=%E2%9C%93&query=-Add-in)
 
