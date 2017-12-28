@@ -259,3 +259,6 @@ Copyright (c) 2015 Microsoft. All rights reserved.
 Connect with me on Twitter [@JasonJohMSFT](https://twitter.com/JasonJohMSFT)
 
 Follow the [Outlook Dev Blog](https://blogs.msdn.microsoft.com/exchangedev)
+
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
