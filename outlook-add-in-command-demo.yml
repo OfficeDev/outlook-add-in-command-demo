@@ -1,0 +1,19 @@
+### YamlMime:Sample
+sample:
+- name: Add-in Command Demo Outlook Add-in
+  path: ''
+  description: The Add-in Command Demo add-in uses the commands model for Outlook add-ins to add buttons to the ribbon.
+  readme: ''
+  generateZip: FALSE
+  isLive: TRUE
+  technologies:
+  - Office Add-in
+  azureDeploy: ''
+  author: jamescro
+  platforms: []
+  languages:
+  - JavaScript
+  extensions:
+    products:
+    - Outlook
+    scenarios: []
