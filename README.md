@@ -1,3 +1,16 @@
+---
+topic: sample
+products:
+- Outlook
+- Office 365
+languages:
+- JavaScript
+extensions:
+  contentType: samples
+  technologies:
+  - Add-ins
+  createdDate: 9/10/2015 1:04:20 PM
+---
 # Add-in Command Demo Outlook Add-in
 
 The Add-in Command Demo add-in uses the commands model for Outlook add-ins to add buttons to the ribbon.
