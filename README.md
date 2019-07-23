@@ -1,5 +1,5 @@
 ---
-topic: sample
+page_type: sample
 products:
 - office-outlook
 - office-365
