@@ -1,17 +1,9 @@
----
-page_type: sample
-products:
-- office-outlook
-- office-365
-languages:
-- javascript
-extensions:
-  contentType: samples
-  technologies:
-  - Add-ins
-  createdDate: 9/10/2015 1:04:20 PM
----
-# Add-in Command Demo Outlook Add-in
+# [ARCHIVED] Add-in Command Demo Outlook Add-in
+
+**Note:** This repo is archived and no longer actively maintained. Security vulnerabilities may exist in the project, or its dependencies. If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Do not use this project as the starting point of a production Office Add-in. Always start your production code by using the Office/SharePoint development workload in Visual Studio, or the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office), and follow security best practices as you develop the add-in.
+	
+![image](https://user-images.githubusercontent.com/8559338/165825752-9c5cd864-4ac1-427c-9da8-a30c8ce403ee.png)
+
 
 The Add-in Command Demo add-in uses the commands model for Outlook add-ins to add buttons to the ribbon.
 
